@@ -1,0 +1,47 @@
+//
+// Animations
+//
+
+ /*
+  * Slider
+  */
+
+ @keyframes fadeOut {
+   100% {
+     opacity: 0;
+     visibility: hidden;
+   }
+ }
+
+/*
+ * LazyLoad
+ */
+
+.lazy {
+  transition: $global-transition;
+  opacity: 0;
+
+  &--has-loaded,
+  &--has-error,
+  .no-js & {
+    opacity: 1;
+  }
+}
+
+
+/*
+ * Ajax Loader
+ */
+
+.loading {
+  color: transparent;
+  background: $darkGrey url('assets/images/ajax-loader.gif') no-repeat center center;
+
+  .slider_overlay {
+    visibility: hidden;
+  }
+
+  .contact &:hover {
+    background: $darkGrey url('/assets/images/ajax-loader.gif') no-repeat center center;
+  }
+}

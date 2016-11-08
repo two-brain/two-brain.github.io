@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+bower_components
+Gemfile.lock
+build
+workbench
+source/_data/assets.json
+source/assets/styles
+source/assets/scripts
+source/assets/images
+source/assets/fonts/src
+source/_includes/main.css
+source/_includes/fonts.css

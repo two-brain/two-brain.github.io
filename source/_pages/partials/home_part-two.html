@@ -1,0 +1,61 @@
+<section id="unser-portfolio" class="portfolio relative">
+  <div class="relative bg--red">
+    <div class="wrap full">
+      <div class="portfolio_text">
+        <header class="spacious text-center">
+          <a data-scroll href="#unser-portfolio">
+            {% include icons/banner/portfolio.svg %}
+            <h2>Unser Portfolio</h2>
+          </a>
+        </header>
+        <p>
+          Gute Webseiten entstehen aus der Synthese von Herzblut und Sachverstand, ein wenig Maschinenöl bildet den Abschluss. Gern suchen wir nach der für Sie passenden Mischung.
+        </p>
+        <p class="margin-top">
+          Hier finden Sie Projekte, mit und an denen wir gern gearbeitet haben.
+        </p>
+        <a data-scroll class="btn btn--red sans-ui" href="/unser-portfolio/">
+          Mehr Projekte ~
+        </a>
+      </div>
+    </div>
+    <div class="portfolio_media bg--dark">
+      <div id="slider" class="slider slider--fade fullscreen">
+        <div class="slider-list fullscreen">
+          {% for client in site.data.portfolio %}
+          <figure class="slider_item relative fullscreen loading">
+            <img class="slider_image fullscreen lazy" title="{{ client.img_title }}" alt="{{ client.img_alt }}"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-src="assets/images/portfolio/portfolio_{{ client.handle }}.jpg" />
+            <figcaption class="slider_overlay flex column center fullscreen">
+              <h4 class="margin-top">
+                {{ client.name }}<br>
+                {{ client.desc }}
+              </h4>
+              <a class="btn btn--dark sans-ui" href="{{ client.url }}" target="_blank">
+                Zur Seite ~
+              </a>
+            </figcaption>
+          </figure>
+          {% if forloop.last %}
+          {% assign fundevogel = site.data.portfolio[0] %}
+          <noscript>
+            <div class="has-bg-image fullscreen" style="background-image: url('assets/images/portfolio/portfolio_{{ fundevogel.handle }}.jpg')">
+              <div class="slider_overlay flex column center fullscreen">
+                <h4 class="margin-top">
+                  {{ fundevogel.name }}<br>
+                  {{ fundevogel.desc }}
+                </h4>
+                <a class="btn btn--dark sans-ui" href="{{ fundevogel.url }}" target="_blank">
+                  Zur Seite ~
+                </a>
+              </div>
+            </div>
+          </noscript>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

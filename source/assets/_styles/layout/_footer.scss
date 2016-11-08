@@ -1,0 +1,62 @@
+//
+// Footer
+//
+
+.site-footer {
+  // flex: none;
+  // background: $darkGrey;
+  // border-top: 5px solid $accent--dark;
+
+  a:hover:not(.btn) {
+    text-decoration: underline;
+  }
+
+  &--primary {
+    font-size: 16px;
+    padding-bottom: $global-padding;
+  }
+
+  &--secondary {
+    font-size: 14px;
+    padding: $global-padding 0;
+    background: $veryDarkGrey;
+    text-align: center;
+  }
+}
+
+.quick {
+  @include span(6 of 12);
+  padding-top: $global-padding;
+
+  &:last-child {
+    @include last;
+  }
+
+  &-links {
+    @include clearfix;
+
+    @include min-width(logo-break) {
+      @include span(6 of 12);
+    }
+  }
+}
+
+.blog-entry {
+  @include min-width(logo-break) {
+    @include span(6 of 12 last);
+  }
+}
+
+.copyright,
+.legal {
+  display: inline-block;
+
+  @include max-width(logo-breakMax) {
+    width: 100%;
+  }
+}
+
+.call-us {
+  padding: $section-padding 0;
+  border-top: 5px solid $accent--dark;
+}

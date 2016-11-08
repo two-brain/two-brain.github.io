@@ -1,0 +1,98 @@
+//
+// Navigation
+//
+
+.nav {
+
+  li + li {
+    margin-left: $nav-separation-margin;
+  }
+}
+
+.site-nav {
+  opacity: 0;
+
+  ul {
+    margin-top: $header-height;
+    margin-bottom: $global-padding--small;
+
+    @include min-height(small) {
+      // margin-bottom: $global-padding--medium;
+    }
+
+    a {
+      width: 100%;
+      font-size: 24px;
+      display: block;
+      padding: 5px 0;
+
+      &.is-active,
+      &:hover {
+        background-color: $accent--dark;
+        // color: $darkGrey;
+      }
+
+      @include min-height(small) {
+        font-size: 26px;
+        padding: 10px 0;
+      }
+
+      @include min-height(540) {
+        font-size: 34px;
+      }
+
+      @include min-height(logo-break) {
+        font-size: 40px;
+        padding: 15px 0;
+      }
+
+      @include min-height(large) {
+        font-size: 50px;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+.lang {
+  z-index: z(space) + 1;
+  position: absolute;
+  left: 20px;
+  transform: translateY(50%);
+  opacity: 0;
+
+  a {
+    color: $white;
+    font-size: 26px;
+  }
+
+  a + a:before {
+    content: '|';
+    padding: 0 12px;
+  }
+}
+
+.adress {
+  font-size: 24px;
+  font-style: normal;
+}
+
+.phone {
+
+  @include min-width(540) {
+    &:after {
+      content: '· ';
+      padding: 0 $global-padding--medium;
+    }
+  }
+
+}
+
+.mail {
+    display: block;
+
+    @include min-width(540) {
+      display: inline;
+    // margin-top: $global-padding--small
+  }
+}

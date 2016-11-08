@@ -1,0 +1,26 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+
+  {% include templates/head.html %}
+
+  <body class="{{ page.slug }}{% if page.slug == 'privacy' or page.slug == 'imprint' %} static-header{% else %} fixed-header{% endif %}">
+
+    {% include templates/header.html %}
+
+    <main class="site-content">
+      {{ content }}
+    </main>
+
+    {% unless page.call-us == false %}
+      {% include call-us.html %}
+    {% endunless %}
+
+    {% include templates/footer.html %}
+
+    {% include templates/foot.html %}
+
+  </body>
+</html>

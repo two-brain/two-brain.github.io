@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Folkers;Martin
+FN:Martin Folkers . two-brain
+ORG:two-brain
+ADR;TYPE=WORK:;;Bluemnerstrasse 1;Leipzig;Sachsen;04229;Deutschland
+EMAIL;TYPE=PREF,INTERNET:hello@twobrain.io
+TEL;TYPE=WORK,VOICE:01776432322
+NOTE:Frisches front-end design & development aus Leipzig
+URL:https://twobrain.io
+REV:2016-09-10T12:00:00Z
+END:VCARD

@@ -1,0 +1,36 @@
+schmardt:
+  - Website:
+    handle: website
+    desc: Website besuchen
+    link: http://martinfolkers.de
+
+  - Github:
+    handle: github
+    desc: Auf Github besuchen
+    link: https://github.com/S1SYPHOS
+
+  - Twitter:
+    handle: twitter
+    desc: Auf Twitter folgen
+    link: https://twitter.de/twobrain_design
+
+wase:
+  - Website:
+    handle: website
+    desc: Website besuchen
+    link: http://wasiliadamow.com/
+
+  - LinkedIn:
+    handle: linkedin
+    desc: LinkedIn-Profil anzeigen
+    link: https://www.linkedin.com/in/wasiliadamow
+
+  - Xing:
+    handle: xing
+    desc: LinkedIn-Profil anzeigen
+    link: https://www.linkedin.com/in/wasiliadamow
+
+  - Stack-Overflow:
+    handle: stackoverflow
+    desc: Auf Stack-Overflow besuchen
+    link: https://stackoverflow.com/users/1911023/gtrfnkn

@@ -1,0 +1,86 @@
+.services {
+
+  .site-content > .section {
+    padding: 0;
+  }
+
+  &_icon {
+    height: 96px;
+  }
+
+  &-item {
+    text-align: center;
+
+    & + & {
+      padding: $section-padding 0;
+    }
+
+    &:nth-child(odd) {
+
+      .wrap:before {
+        left: 24px;
+        right: auto;
+      }
+
+      .icon {
+        @include span(3 of 12);
+        text-align: left;
+      }
+
+      .desc {
+        @include span(8 of 12 last);
+        margin-right: span(1 of 12) + gutter();
+      }
+    }
+
+    &:nth-child(even) {
+
+      .wrap:before {
+        right: 24px;
+        left: auto;
+      }
+
+      .icon {
+        @include span(3 of 12 last);
+        text-align: right;
+      }
+
+      .desc {
+        @include span(8 of 12);
+        margin-left: span(1 of 12) + gutter();
+        margin-right: gutter();
+        text-align: right;
+      }
+    }
+
+    .wrap:before {
+      bottom: calc(-#{$section-padding} - 2rem);
+      content: '';
+      position: absolute;
+      border-left: transparent 2rem solid;
+      border-right: transparent 2rem solid;
+      z-index: 2;
+    }
+
+    &.bg--white {
+      background-color: #fff;
+    }
+
+    &.bg--white .wrap:before {
+      border-top: 2rem solid #fff;
+    }
+
+    @each $slug, $light, $dark in zip($services--slug, $services--light, $services--dark) {
+
+      &--#{$slug} {
+        border-top: 5px solid $dark;
+        background-color: $light;
+        color: $dark;
+      }
+
+      &--#{$slug} .wrap:before {
+        border-top: 2rem solid $light;
+      }
+    }
+  }
+}

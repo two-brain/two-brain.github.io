@@ -1,0 +1,52 @@
+---
+layout: page
+title: Impressum
+slug: imprint
+permalink: /impressum/
+call-us: false
+---
+<h3>Allgemeine Angaben</h3>
+<p>
+  Diensteanbieter iSd § 5 TMG sowie verantwortlich iSd § 55 II RStV:
+</p>
+<p class="margin-top">
+  Martin Folkers<br>
+  Blümnerstraße 1<br>
+  04229 Leipzig
+</p>
+<p class="margin-top">
+  Telefon: <a title="" alt="" href="tel:+491776432322">+49 (0) 177 / 64 32 322</a><br>
+  eMail: <a title="" alt="" href="mailto:{{ site.about_me.mail }}">{{ site.about_me.mail }}</a>
+</p>
+
+<h3 class="padding-top">Haftung für Inhalte</h3>
+<p>
+  Als Diensteanbieter bin ich gemäß § 7 I TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.
+</p>
+
+<h3 class="padding-top">Haftung für Links</h3>
+<p>
+  Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.
+</p>
+
+<h3 class="padding-top">Urheberrecht</h3>
+<p>
+  Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht jedoch den kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht von mir erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.
+</p>
+
+<h3 class="padding-top">Kolophon</h3>
+<p>
+  Diese Webseite wurde mit Hilfe von <a title="" alt="" target="_blank" href="https://jekyllrb.com">Jekyll</a> realisiert. Bei den verwendeten Icons handelt es sich um <a title="" alt="" target="_blank" href="https://octicons.github.com/">Github Octicons</a>, <a title="" alt="" target="_blank" href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a> sowie <a href="https://linearicons.com">Linearicons-Free</a>, welche von mir bearbeitet wurden. Titelbild und Banner sind auf <a title="" alt="" target="_blank" href="https://unsplash.com">Unsplash</a> erhältlich und wurden von <a title="" alt="" target="_blank" href="https://unsplash.com/@danielkcheung">Daniel Cheung</a> angefertigt. Der Webspace wird von <a href="https://uberspace.de/">Uberspace</a> bereitgestellt, dem wohl außergewöhnlichsten Hostinganbieter Deutschlands.
+</p>
+
+<h3 class="padding-top">Danksagung</h3>
+<p>
+  Mein herzlicher Dank gilt weiterhin allen, die mit Open Source Projekten und verwendungsfreundlichen Lizenzen unterstellten Inhalten diese und unzählige andere Webseiten ermöglichen, für diese Seite danke ich insbesondere:
+    {% for contributor in site.data.contributions %}
+
+      <a href="{{ contributor.url }}">{{ contributor.name }}</a>{% if forloop.rindex > 2 %},{% else %}{% if forloop.rindex == 2 %} sowie{% else %}.{% endif %}{% endif %}
+    {% endfor %}
+</p>
+<p class="margin-top">
+  Weitere Informationen zur verwendeten Technik erhalten Sie <a title="" alt="" target="_blank" href="{{ site.url }}/humans.txt">hier</a>.
+</p>

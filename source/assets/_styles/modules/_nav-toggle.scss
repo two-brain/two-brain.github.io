@@ -1,0 +1,57 @@
+//
+// Nav toggle button
+//
+
+.nav-toggle {
+  // font-size: 21px;
+  z-index: z(space);
+  height: 65px;
+  width: 65px;
+  background-color: $veryLightGrey;
+  border-radius: 50%;
+  transition: $global-transition ease-in;
+
+  // &:hover {
+  //   background-color: $lightGrey !important;
+  // }
+
+  .is-maximized & {
+    background-color: $white;
+  }
+
+  // @include min-width(large) {
+  //   display: none;
+  // }
+
+  &_icon {
+    top: 50%;
+    transform: translateY(-50%);
+    text-indent: -9999px;
+    left: 50%;
+    margin-left: -11px;
+
+    &,
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      height: 3.5px;
+      width: 24px;
+      right: 0;
+      background: $darkGrey;
+      transition: $global-transition;
+      border-radius: $global-radius;
+    }
+
+    &:before {
+      top: -8px;
+      height: 4px;
+    }
+
+    &:after {
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      top: 8px;
+    }
+  }
+}

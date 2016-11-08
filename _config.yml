@@ -1,0 +1,37 @@
+# SITE SETTINGS
+title: 'two-brain · frontend-design & development'
+description: Frischer Wind für Ihre Internetseite - ob persönlicher Blog, Firmenseite mit Onlineshop oder Online-Marketing, wir sind Ihr Ansprechpartner im Web.
+url: https://S1SYPHOS.github.io # the base hostname & protocol for your site
+last_update: 2016/09/10
+
+# AUTHOR
+about_me:
+  name: Martin Folkers
+  mail: hello@twobrain.io
+  location: Leipzig, Germany
+  org_github: https://github.com/two-brain
+
+twitter:
+  username: twobrain_design
+
+# SEO
+# google_site_verification:
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+source: source
+destination: build
+include: ['_pages']
+exclude: ['_pages/partials']
+
+# PLUGINS
+gems:
+  # - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-email-protect
+
+# TECHNOLOGY
+standards: HTML5, CSS3
+components:
+development: Jekyll, Gulp, Webpack, Sass

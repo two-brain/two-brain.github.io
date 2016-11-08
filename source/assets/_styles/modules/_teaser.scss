@@ -1,0 +1,148 @@
+//
+// Teaser
+//
+
+.teaser {
+  overflow: hidden;
+  padding-top: $header-height;
+  height: 100vh;
+
+  &_bg-image {
+    height: inherit;
+    // will-change: transform;
+    padding-top: $header-height + $section-padding;
+
+    .home & {
+      background-image: url('/assets/images/home_480x640.jpg');
+
+      @include min-width(small) {
+        background-image: url('/assets/images/home_480x640.jpg');
+      }
+
+      @include min-width(logo-break) {
+        background-image: url('/assets/images/home_768x1024.jpg');
+      }
+
+      @include min-width(large) {
+        background-image: url('/assets/images/home_1366x768.jpg');
+      }
+
+      @include min-width(1440) {
+        background-image: url('/assets/images/home_1600x900.jpg');
+      }
+
+      @include min-width(xxlarge) {
+        background-image: url('/assets/images/home_1920x1080.jpg');
+      }
+    }
+
+    .team & {
+      // background-position: right;
+      background-image: url('/assets/images/team_480x640.jpg');
+
+      @include min-width(small) {
+        background-image: url('/assets/images/team_480x640.jpg');
+      }
+
+      @include min-width(logo-break) {
+        background-image: url('/assets/images/team_768x1024.jpg');
+      }
+
+      @include min-width(large) {
+        background-image: url('/assets/images/team_1366x768.jpg');
+      }
+
+      @include min-width(1440) {
+        background-image: url('/assets/images/team_1600x900.jpg');
+      }
+
+      @include min-width(xxlarge) {
+        background-image: url('/assets/images/team_1920x1080.jpg');
+      }
+    }
+
+    .services & {
+      background-image: url('/assets/images/services_480x640.jpg');
+      // background-position: left;
+
+      @include min-width(small) {
+        background-image: url('/assets/images/services_480x640.jpg');
+      }
+
+      @include min-width(logo-break) {
+        background-image: url('/assets/images/services_768x1024.jpg');
+      }
+
+      @include min-width(large) {
+        background-image: url('/assets/images/services_1366x768.jpg');
+      }
+
+      @include min-width(1440) {
+        background-image: url('/assets/images/services_1600x900.jpg');
+      }
+
+      @include min-width(xxlarge) {
+        background-image: url('/assets/images/services_1920x1080.jpg');
+      }
+    }
+
+    .contact & {
+      background-image: url('/assets/images/contact_480x640.jpg');
+      background-position: right;
+
+      @include min-width(small) {
+        background-image: url('/assets/images/contact_480x640.jpg');
+      }
+
+      @include min-width(logo-break) {
+        background-image: url('/assets/images/contact_768x1024.jpg');
+      }
+
+      @include min-width(large) {
+        background-image: url('/assets/images/contact_1366x768.jpg');
+      }
+
+      @include min-width(1440) {
+        background-image: url('/assets/images/contact_1600x900.jpg');
+      }
+
+      @include min-width(xxlarge) {
+        background-image: url('/assets/images/contact_1920x1080.jpg');
+      }
+    }
+  }
+
+  &-heading {
+    display: inline;
+    line-height: 2.3;
+    box-shadow: 20px 0 0 $accent, -10px 0 0 $accent;
+    box-decoration-break: clone;
+    user-select: none;
+    font-size: 22px;
+    padding: 6px 0 12px;
+
+    @include min-width(small) {
+      line-height: 1.9;
+      font-size: 35px;
+      padding: 6px 0 12px 20px;
+    }
+
+    @include min-width(medium) {
+      font-size: 45px;
+    }
+
+    @include min-width(large) {
+      line-height: 1.7;
+      font-size: 55px;
+    }
+  }
+}
+
+.claim {
+  margin-right: 20px;
+  // display: block;
+
+  a {
+    // display: flex;
+  }
+}

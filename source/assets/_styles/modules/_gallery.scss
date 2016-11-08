@@ -1,0 +1,45 @@
+.gallery {
+  display: table;
+
+  &--services {
+    cursor: help;
+  }
+
+  &--contact {
+    width: 100%;
+  }
+
+  &-item {
+    padding-bottom: 20px;
+
+    @include min-width(logo-break) {
+      @include gallery(2 of 4);
+    }
+
+    @include min-width(xlarge) {
+      @include gallery(3 of 9);
+    }
+
+    @include min-width(medium) {
+      &_text {
+        transition: $global-transition;
+        opacity: 0;
+        // visibility: hidden;
+
+        .gallery-item:hover & {
+          opacity: 1;
+          // visibility: visible;
+        }
+      }
+    }
+
+    // &_icon {
+    
+    // }
+
+    &_phrase {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

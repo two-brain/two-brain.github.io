@@ -1,0 +1,66 @@
+//
+// Buttons
+//
+
+.btn {
+  appearance: none;
+  display: inline-block;
+  margin-top: $global-padding--medium;
+  padding: 8px 12px;
+  font-weight: 700;
+  border: 0;
+  border-radius: $global-radius;
+  color: $white;
+  background-color: $accent;
+  transition: background-color $global-duration $global-timing;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  @include max-width(smallMax) {
+    width: 100%;
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    // background-color: shade($accent, 20%);
+    background-color: $accent--dark;
+    color: #fff;
+  }
+
+  &.no-margin {
+    margin-top: 0;
+  }
+
+  &--red {
+  	background-color: $accent--dark;
+    color: $white;
+
+  	&:hover,
+    &:focus {
+      background-color: shade($accent--dark, 20%);
+  		// color: $white;
+  	}
+  }
+
+  &--success {
+    background: $success;
+    border-color: $success;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background: $success;
+      color: $white;
+    }
+  }
+
+  &--error {
+
+    &:hover,
+    &:focus {
+      background: $accent;
+      color: $white;
+    }
+  }
+}

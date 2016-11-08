@@ -1,0 +1,80 @@
+{
+  "name": "martinfolkers.de",
+  "version": "1.0.1",
+  "author": "S1SYPHOS",
+  "homepage": "https://martinfolkers.de",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test",
+    "build": "gulp build --production",
+    "imagemin": "gulp imagemin",
+    "production": "gulp --production",
+    "sass": "gulp sass",
+    "server": "gulp server",
+    "server-production": "gulp server --production"
+  },
+  "keywords": [
+    "Autoprefixer",
+    "Browsersync",
+    "gulp",
+    "imagemin",
+    "Jekyll",
+    "PostCSS",
+    "Sass",
+    "Webpack"
+  ],
+  "dependencies": {
+    "barba.js": "^1.0.0",
+    "blazy": "^1.6.2",
+    "headroom.js": "^0.9.3",
+    "object-fit-images": "^2.5.6",
+    "parallax-vanilla": "^1.0.10",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "susy": "^2.2.12",
+    "velocity-animate": "^1.2.3",
+    "wallop": "^2.3.0",
+    "waypoints": "^4.0.0",
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.4.0",
+    "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.13.0",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-newer": "^1.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-watch": "^4.3.8",
+    "imagemin-pngquant": "^5.0.0",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.1",
+    "postcss-merge-rules": "^2.0.10",
+    "postcss-pxtorem": "^3.3.1",
+    "through2": "^2.0.1",
+    "vinyl-named": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^1.13.2",
+    "webpack-stream": "^3.2.0",
+    "yargs": "^4.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/S1SYPHOS/S1SYPHOS.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/S1SYPHOS/S1SYPHOS.github.io/issues"
+  }
+}

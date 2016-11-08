@@ -1,0 +1,62 @@
+---
+layout: home
+permalink: "/kontakt/"
+title:  "Kontakt"
+slug: contact
+handle: schreiben-sie-uns
+call-us: false
+---
+<div class="wrap">
+  <p class="card padding-top">
+    Dann freuen wir uns über Ihre Nachricht! Nutzen Sie hierfür unser Kontaktformular oder schreiben Sie uns eine kurze <a href="mailto:{{ site.about_me.mail | encode_email }}">Mail</a>, gern auch <a title="Fingerprint: 875D 7213 BF8F 5C40 9FD8 7216 A769 F627 E241 BE66" href="https://pgp.mit.edu/pks/lookup?op=get&search=0xA769F627E241BE66">verschlüsselt</a>. Wenn Sie kurz beschreiben, worum es in Ihrem Projekt geht, welche Aufgaben wir übernehmen sollen und worauf wir dabei ggf. aufbauen können, bringen wir zu einem persönlichen Treffen bereits erste Ideen mit.
+  </p>
+  <form id="js-cform" class="cform padding-top" action="https://formspree.io/{{ site.about_me.mail }}" method="POST">
+    <div class="gallery gallery--contact">
+      <div class="gallery-item cform-group">
+        <label class="cform-group_label required" for="Name">Name:</label>
+        <input class="cform-field" type="text" name="name" required />
+      </div>
+      <div class="gallery-item cform-group">
+        <label class="cform-group_label required" for="_replyto">eMail:</label>
+        <input class="cform-field" type="email" name="_replyto" required />
+      </div>
+      <div class="gallery-item cform-group">
+        <label class="cform-group_label" for="Telefon">Telefon:</label>
+        <input class="cform-field" type="text" name="Telefon" />
+      </div>
+
+      <div class="gallery-item cform-group">
+        <label class="cform-group_label" for="Webseite">Webseite:</label>
+        <input class="cform-field" type="text" name="Webseite">
+      </div>
+      <div class="gallery-item cform-group">
+        <label class="cform-group_label" for="Budget">Budget:</label>
+        <select class="cform-field" name="Budget">
+          <option value="< 500€">&lt; 500€</option>
+          <option value="500€ - 1.000€" selected="selected">500€ - 1.000€</option>
+          <option value="1.000€ - 1.500€">1.000€ - 1.500€</option>
+          <option value="1.500€ - 2.000€">1.500€ - 2.000€</option>
+          <option value="> 2.000€">&gt; 2.000€</option>
+        </select>
+      </div>
+      <div class="gallery-item cform-group">
+        <label class="cform-group_label" for="Job">Art des Jobs:</label>
+        <select class="cform-field" name="Job">
+          <option value="Webdesign">Webdesign</option>
+          <option value="Webdevelopment">Webdevelopment</option>
+          <option value="Android / iOS">App für Android / iOS</option>
+          <option value="Softwaredevelopment">Softwaredevelopment</option>
+          <option value="Logo-Design">Logo-Design</option>
+          <option value="Sonstiges">Sonstiges</option>
+        </select>
+      </div>
+    </div>
+    <div class="cform-group">
+      <label class="cform-group_label" for="user_message">Beschreibung:</label>
+      <textarea class="cform-field cform-field--textarea" name="user_message"></textarea>
+      <input type="hidden" name="_format" value="plain" />
+      <input type="text" name="_gotcha" style="display:none" />
+      <input id="js-submit" class="btn transparent sans-ui" type="submit" value="Senden ~" />
+    </div>
+  </form>
+</div>

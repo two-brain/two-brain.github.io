@@ -1,0 +1,20 @@
+- name: Fundevogel (Freiburg)
+  desc: Kinder- und Jugendbuchhandlung
+  img_alt: Zwei einladende Stühle vor einer Wand aus Kinderbüchern im Fundevogel
+  img_title: Bücher für Kinder und Jugendliche gibt's im Fundevogel - Lieber Barfuss als ohne Buch
+  url: http://fundevogel.de
+  handle: fundevogel
+
+- name: Govinda (Leipzig)
+  desc: Bistro, Event- & Festival-Catering
+  img_alt: Startseite von Govinda
+  img_title: Govinda - Bistro, Lieferservice & Catering für jede Veranstaltungen, indisch, vegan + vegetarisch
+  url: http://govinda-leipzig.de
+  handle: govinda
+
+- name: Sturbock (München)
+  desc: Curated Shopping
+  img_alt: Startseite von Sturbock auf einem Bildschirm
+  img_title: Sturbock - Deine Plattform für mehr als nur schöne Dinge
+  url: https://sturbock.me
+  handle: sturbock

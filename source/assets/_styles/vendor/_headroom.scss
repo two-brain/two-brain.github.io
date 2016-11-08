@@ -1,0 +1,8 @@
+.headroom {
+  transition: transform $global-transition ease-in-out;
+  // will-change: transform;
+
+	&--unpinned {
+		transform: translateY(-100%);
+	}
+}

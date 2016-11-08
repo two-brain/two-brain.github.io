@@ -1,0 +1,109 @@
+//
+// Support classes
+//
+
+.relative {
+	position: relative;
+}
+
+// .filler {
+// 	width: 100%;
+// 	height: $header-height;
+// 	position: absolute;
+// 	bottom: 0px;
+// 	z-index: z(sewage);
+// }
+
+.fullscreen {
+	height: 100%;
+	width: 100%;
+}
+
+.padding {
+
+	&-top {
+		padding-top: $global-padding;
+	}
+
+	&-left {
+		@include min-width(logo-break) {
+			padding-left: $global-padding--medium;
+		}
+	}
+
+	&-right {
+		@include min-width(logo-break) {
+			padding-right: $global-padding--medium;
+		}
+	}
+}
+
+.spacious {
+	padding: $global-padding--medium 0;
+}
+
+.margin-top {
+	margin-top: $global-padding--small;
+}
+
+.has-bg-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+	&.top {
+		background-position: center top;
+	}
+
+	&.bottom {
+		background-position: center bottom;
+	}
+}
+
+.has-overlay {
+	display: block;
+	background: $accent;
+	border-radius: $global-radius;
+
+	&:hover img,
+	&:focus img {
+		opacity: 0.85;
+	}
+}
+
+.float {
+
+	&-left {
+		float: left;
+	}
+
+	&-right {
+		float: right;
+	}
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: z(space);
+}
+
+.text {
+
+	&-left {
+		text-align: left;
+	}
+
+	&-center {
+		text-align: center;
+	}
+
+	&-right {
+		text-align: right;
+	}
+}
+
+// .is-elevated {
+// 	cursor: default !important;
+// }
