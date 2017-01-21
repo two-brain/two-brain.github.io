@@ -34,18 +34,16 @@ module.exports = {
 
   autoprefixer: {
     browsers: [
-      '> 1%',
-      'last 15 versions',
+      'last 2 versions',
+      'android 4',
+      'opera 12'
     ]
   },
 
   pxtorem: {
     options: {
       selectorBlackList: [
-        'html',
-        'container',
-        'sans-ui',
-        'site-footer'
+        'html'
       ],
       prop_white_list: [
         'font-size',

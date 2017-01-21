@@ -1,13 +1,5 @@
 # PRODUCTION-ONLY SETTINGS
 
 url: https://twobrain.io
-baseurl: '/stage' # the subpath of your site, e.g. /blog
-piwik: true
-
-# Hides your drafts and future posts
-future: false
-show_drafts: false
-# Gives you more accurate related posts
-lsi: true
-# Removes the upper limit for posts generated
-limit_posts: 0
+baseurl: '' # subpath of the site
+piwik: true # only include Piwik tracking code in production mode
