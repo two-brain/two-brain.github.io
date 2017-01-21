@@ -24,5 +24,12 @@ var lazyload = new Blazy({
       var parent = element.parentNode;
       parent.className = parent.className.replace(/\bloading\b/, 'loaded');
     }, 200);
+  },
+  error: function(ele, msg){
+    if (msg === 'missing'){
+      console.log('data-src is missing');
+    } else if (msg === 'invalid'){
+      console.log('data-src is invalid');
+    }
   }
 });
