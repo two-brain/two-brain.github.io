@@ -1,0 +1,70 @@
+<head prefix="og: http://ogp.me/ns#">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta description="{{ site.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+
+  <!-- {% include font-loading.html %} -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+
+  <style media="screen">
+    {% include main.css %}
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sentry"/>
+  <meta property="og:description" content="{{ site.description }}"/>
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:title" content="{{ page.title }} | {{ site.title }}"/>
+  <!-- <meta property="og:image:url" content="https://a0wx592cvgzripj.global.ssl.fastly.net/_static/7170334cffac6f770dc5ac62077be4ee/getsentry/images/og.jpg"/>
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" /> -->
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:creator" content="@{{ site.twitter }}">
+  <meta property="twitter:title" content="{{ site.description }}">
+  <meta property="twitter:site" content="{{ site.url }}">
+  <meta property="twitter:description" content="{{ site.description }}">
+  <!-- <meta property="twitter:image:src" content="https://a0wx592cvgzripj.global.ssl.fastly.net/_static/7170334cffac6f770dc5ac62077be4ee/getsentry/images/og.jpg">
+  <meta property="twitter:image:width" content="1200">
+  <meta property="twitter:image:height" content="630"> -->
+
+  <!-- <link rel="image_src" type="image/jpeg" href="https://a0wx592cvgzripj.global.ssl.fastly.net/_static/7170334cffac6f770dc5ac62077be4ee/getsentry/images/og.jpg" /> -->
+  <link href="{{ site.url }}favicon.ico" rel="icon" type="image/png"/>
+  <!-- <link href="https://a0wx592cvgzripj.global.ssl.fastly.net/_static/7170334cffac6f770dc5ac62077be4ee/getsentry/dist/application.css" rel="stylesheet"/> -->
+  <link rel="canonical" href="{{ site.url }}">
+  <link rel="author" href="humans.txt" />
+
+  <title>
+    {{ page.title }} | {{ site.title }}
+  </title>
+
+  <!-- <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "Sentry",
+      "url": "https://sentry.io"
+    },{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Sentry",
+      "url": "https://sentry.io",
+      "logo": "https://a0wx592cvgzripj.global.ssl.fastly.net/_static/7170334cffac6f770dc5ac62077be4ee/getsentry/images/branding/png/sentry-horizontal-black.png",
+      "sameAs": ["https://github.com/getsentry", "https://twitter.com/getsentry", "https://facebook.com/getsentry"],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+1-855-775-8773",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "availableLanguage": ["English"]
+      },{
+        "@type": "ContactPoint",
+        "email": "hello@sentry.io",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }]
+    }
+  </script> -->
+</head>

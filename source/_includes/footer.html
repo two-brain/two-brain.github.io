@@ -1,0 +1,39 @@
+<footer class="site-footer bgc" role="contentinfo">
+  <nav class="row">
+        <ul class="fade-links inline-list">
+          <li>
+            <a href="https://twitter.com/{{ site.twitter }}">
+              {% include icons/twitter.svg %}
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/{{ site.github }}">
+              {% include icons/github.svg %}
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="mailto:{{ site.author.mail | encode_email }}">
+              {% include icons/gnupg.svg %}
+              PGP Public Key
+            </a>
+          </li>
+          <li class="pull-right">
+            <a title="Datenschutzhinweise lesen" href="{{ site.baseurl }}/datenschutz/">Datenschutz</a>
+          </li>
+          <li>
+            <a title="Impressum begutachten" href="{{ site.baseurl }}/impressum/">Impressum</a>
+          </li>
+          <li>
+            <a data-scroll href="#" title="Zurück zum Seitenanfang" >Nach oben &#x2191;</a>
+          </li>
+
+        </ul>
+      </nav>
+      <div class="row">
+        <p class="copyright">
+          &copy; 2016 &middot; Alle Rechte vorbehalten.
+        </p>
+      </div>
+</footer>
