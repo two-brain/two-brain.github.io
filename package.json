@@ -29,6 +29,7 @@
     "Webpack"
   ],
   "dependencies": {
+    "Right-Height": "github:cferdinandi/right-height",
     "blazy": "^1.8.2",
     "headroom.js": "^0.9.3",
     "object-fit-images": "^3.0.1",

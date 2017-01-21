@@ -7,6 +7,5 @@
 
 var smoothScroll = require('smooth-scroll');
 smoothScroll.init({
-  // offset: 79, // = $header-height-small
   activeClass: 'is-active'
 });
