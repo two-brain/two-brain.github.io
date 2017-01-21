@@ -7,10 +7,8 @@
 
  var Headroom = require('headroom.js'),
  header = document.getElementById('site-header'),
- main = document.getElementById('barba-wrapper'),
  headroom  = new Headroom(header, {
    offset: 250,
    tolerance: 5,
-  //  scroller: main
  });
  headroom.init();
