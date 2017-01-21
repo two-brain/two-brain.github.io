@@ -1,4 +1,5 @@
 # CONTRIBUTORS - JS LIBRARIES & FONTS
+
 - name: Federico Brigante
   url: https://twitter.com/bfred_it
   projects:
@@ -8,58 +9,34 @@
 - name: Pedro Duarte
   url: http://pedroduarte.me/
   projects:
-    - name: wallop
+    - name: Wallop
       url: https://github.com/peduarte/wallop
-
-- name: Erik Engervall
-  url: http://engervall.com/
-  projects:
-    - name: Parallax Vanilla
-      url: https://github.com/erikengervall/parallax-vanilla
 
 - name: Chris Ferdinandi
   url: https://github.com/cferdinandi
   projects:
     - name: Smooth Scroll
       url: https://github.com/cferdinandi/smooth-scroll
+    - name: Right Height
+      url: https://github.com/cferdinandi/right-height
 
 - name: Bjørn Klinggaard
   url: http://dinbror.dk/
   projects:
-    - name: blazy
+    - name: Blazy
       url: https://github.com/dinbror/blazy
 
-- name: Andreas Larsen
-  url: https://larsenwork.com/
+- name: Christian Robertson
+  url: http://christianrobertson.com/
   projects:
-    - name: Gidole
-      url: https://github.com/larsenwork/Gidole
-    - name: Monoid
-      url: https://github.com/larsenwork/monoid
+    - name: Roboto (Font)
+      url: https://github.com/google/roboto
 
-- name: Sol Matas
-  url: https://twitter.com/tullida
+- name: Chris Simpkins
+  url: https://twitter.com/csimpkins
   projects:
-    - name: Bitter
-      url: http://www.huertatipografica.com/en/fonts/bitter-ht
-
-# - name: Chris Simpkins
-#   url: https://twitter.com/csimpkins
-#   projects:
-#     - name: Hack
-#       url: https://github.com/chrissimpkins/Hack
-
-- name: Julian Shapiro
-  url: https://www.julian.com/
-  projects:
-    - name: Velocity
-      url: https://github.com/julianshapiro/velocity
-
-- name: Caleb Troughton
-  url: http://imakewebthings.com/
-  projects:
-    - name: Waypoints
-      url: https://github.com/imakewebthings/waypoints
+    - name: Hack (Font)
+      url: https://github.com/chrissimpkins/Hack
 
 - name: Nick Williams
   url: https://twitter.com/WickyNilliams
