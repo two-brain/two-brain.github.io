@@ -4,23 +4,25 @@ layout: none
 <!DOCTYPE html>
 <html class="no-js" lang="de">
 
-  {% include templates/head.html %}
+  {% include head.html %}
 
-  <body class="{{ page.slug }}{% if page.slug == 'privacy' or page.slug == 'imprint' %} static-header{% else %} fixed-header{% endif %}">
+  <body class="{{ page.slug }}">
 
-    {% include templates/header.html %}
+    {% include header.html %}
 
     <main class="site-content">
+
       {{ content }}
+
     </main>
 
-    {% unless page.call-us == false %}
-      {% include call-us.html %}
-    {% endunless %}
+    {% include footer.html %}
 
-    {% include templates/footer.html %}
+    <script src="{{ site.baseurl }}/assets/scripts/{{ site.data.assets.main.js }}" type="text/javascript"></script>
 
-    {% include templates/foot.html %}
+    {% if site.piwik == true %}
+      {% include piwik.html %}
+    {% endif %}
 
   </body>
 </html>
