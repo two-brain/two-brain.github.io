@@ -1,5 +1,5 @@
 .headroom {
-  transition: transform $global-transition ease-in-out;
+  transition: transform $base-duration $base-timing;
   // will-change: transform;
 
 	&--unpinned {

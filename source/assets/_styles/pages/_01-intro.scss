@@ -1,0 +1,13 @@
+.intro {
+  padding: 3 * $base-spacing 0 8 * $base-spacing;
+  background: $action-color;
+  color: #fff;
+
+  .text-block {
+    // max-width: 640px;
+
+    p {
+      font-size: 36px;
+    }
+  }
+}

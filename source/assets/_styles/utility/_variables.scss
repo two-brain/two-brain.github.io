@@ -1,7 +1,3 @@
-//
-// Variables
-//
-
 /*
 screen resolutions - main targets:
 1920x1080
@@ -20,6 +16,7 @@ screen resolutions - main targets:
 100em = 1600px
 */
 
+// Breakpoints
 $breakpoints: (
   smallMax: 29.938em,
   small: 30em,
@@ -35,28 +32,7 @@ $breakpoints: (
   xxlarge: 100em,
 );
 
-$white: #fff;
-$accent: #d32f2f; // #ff9800;
-$accent--dark: #b71c1c; // #ef6c00;
-$veryLightGrey: #f0f0f0;
-$lightGrey: #ccc;
-$darkGrey: #404640;
-$veryDarkGrey: #3b413b;
-$success: #26a926;
-
-$facebook: #3b5998;
-$xing: #b0d400;
-$linkedin: #0077b5;
-$twitter: #55acee;
-$github: #4078c0;
-$stackoverflow: #f48024;
-
-$services--slug: versatile, fast, secure, environment-friendly, innovative, reliable;
-$services--light: #ffcdd2, #ffe0b2, #fff9c4, #dcedc8, #b3e5fc, #e1bee7;
-$services--dark: #ef5350, #ffa726, #ffd600, #9ccc65, #29b6f6, #ab47bc;
-
-
-
+// Z-index layers
 $z-layers: (
   sewage: -999,
   default: 1,
@@ -65,72 +41,58 @@ $z-layers: (
   space: 999
 );
 
-// Global
+// Typography
+$base-font-family: 'Roboto', sans-serif;
+$heading-font-family: $base-font-family;
 
-$global-padding: 30px;
-$global-padding--medium: 20px;
-$global-padding--small: 10px;
-$global-radius: 3px;
-$box-shadow--level-1: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-$box-shadow--level-1--inset: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23), inset 0 -3px 6px rgba(0,0,0,0.16), inset 0 -3px 6px rgba(0,0,0,0.23);
-$box-shadow--level-2: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-$box-shadow--level-2--inset: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24), inset 0 -1px 3px rgba(0,0,0,0.12), inset 0 -1px 2px rgba(0,0,0,0.24);
-$global-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-$global-transition: 0.3s;
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$red: #f55f5f;
+$teal: #5eb2b2;
+$light-gray: #faf9f9;
+$dark-gray: #444141;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $red;
+$accent-color: $teal;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Animations
-$global-duration: 200ms;
-$global-timing: ease;
+$base-duration: 200ms;
+$base-timing: ease;
 
-$section-padding: 50px;
 
-// Fonts
+// header
+$header-height: 100px;
 
-// Stage 1
-$font-stack--serif-stage-1: 'Bitter-Critical', serif;
-$font-stack--sans-serif-stage-1: 'Gidole-Critical', sans-serif;
+// Page logo
+$page-logo-diameter: 64px;
+$page-logo-diameter--small: 48px;
 
-// Stage 2
-$font-stack--serif-stage-2: 'Bitter', serif;
-$font-stack--sans-serif-stage-2: 'Gidole', sans-serif;
-
-// Timeline
-// $timeline-diameter-big: 26px;
-// $timeline-diameter-small: 12px;
-// $timeline-step-padding: $timeline-diameter-big + 10px;
-
-// Section logo
-$section-logo-diameter-big: 64px;
-$section-logo-diameter-small: 48px;
-
-// $logo-height-big: 90px;
-// $logo-width-big: 346.5px;
-// $logo-height-small: 72px;
-// $logo-width-small: 279.125px;
-//
-$header-height: 90px;
-// $header-height-small: 90px; // + 1px bottom border
-//
-// $header-padding-big: ($header-height-big - $logo-height-big) / 2;
-// $header-padding-small: ($header-height-small - $logo-height-small) / 2;
-
-$nav-separation-margin: 20px;
-$sans-ui-font-size: 16px;
-
-$gallery-icon-width: 96px;
-// $section-sign-margin: 0 20px 0 0;
-// $section-sign-diameter: 56px;
-
-$heading-padding: $global-padding--medium;
-$heading-padding--big: $heading-padding * 2;
-
-$quote-font-size: 60px;
-
-$card-padding: $global-padding--medium;
-$card-bg-color: $veryLightGrey;
-
-$team-icon-diameter: 56px;
-$team-icon-diameter--small: 40px;
-$team-arrow-width: 15px;
-$team-arrow-height: 12.5px;
-$team-arrow-top: 30px;
+// Service styles
+$service-slug: versatile, fast, secure, natural, innovative, reliable;
+$service-color: $red, #ffa726, #ffea00, #9ccc65, #4fc3f7, #ba68c8;

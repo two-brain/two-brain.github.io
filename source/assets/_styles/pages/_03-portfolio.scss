@@ -1,0 +1,41 @@
+//
+// Specific rules for the portfolio section
+//
+
+.portfolio {
+
+  &_text {
+    padding-top: 2 * $base-spacing;
+    padding-bottom: 2 * $base-spacing;
+
+    @include min-width(large) {
+      padding-right: $base-spacing;
+      width: 50%;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    a {
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_media {
+    position: relative;
+    height: 25rem;
+
+    @include min-width(large) {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+    }
+  }
+}

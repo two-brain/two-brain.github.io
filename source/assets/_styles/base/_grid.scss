@@ -9,18 +9,9 @@
   &-wrap {
     flex: 1;
   }
-
-  &.column {
-    flex-flow: column nowrap;
-  }
-
-  &.center {
-    justify-content: center;
-    align-items: center;
-  }
 }
 
-.one_half {
+.one-half {
   @include min-width(logo-break) {
     @include span(2 of 4);
 

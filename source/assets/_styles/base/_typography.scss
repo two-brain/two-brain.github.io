@@ -1,9 +1,68 @@
-//
-// Typography
-//
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 
-.sans-ui,
-.sans-ui a {
-  font-size: $sans-ui-font-size;
-  font-family: $font-stack--sans-serif-stage-2;
+  @include min-width(medium) {
+    font-size: 18px;
+  }
+
+  @include min-width(xlarge) {
+    font-size: 20px;
+  }
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: $heading-line-height;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
 }

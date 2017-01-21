@@ -1,0 +1,57 @@
+<section class="portfolio relative">
+  <div class="relative bgc bgc--teal">
+    <div class="wrap full">
+      <div class="portfolio_text">
+        <strong>Für ein besseres Web</strong>
+        <p>
+          Ich entwerfe, errichte und betreue <strong>Webprojekte</strong> für kleine Unternehmen sowie Einzelpersonen. Gern saniere ich auch bestehende Internetseiten, indem ich sie optisch überarbeite <strong>(Redesign)</strong> oder ihre technischen Grundstrukturen modernisiere <strong>(Relaunch)</strong>.
+        </p>
+        <p>
+          Darüber hinaus beteilige ich mich an der Entwicklung von freier und quelloffener Software. Gern unterstütze ich Projekte mit toller Idee, aber knappem Geldbeutel <strong>pro bono</strong>, wenn mein Zeitplan dies zulässt.
+        </p>
+      </div>
+    </div>
+    <div class="portfolio_media bgc bgc--dark">
+      <div id="slider" class="slider slider--fade fullscreen">
+        <div class="slider-list fullscreen">
+          {% for client in site.data.portfolio %}
+          <figure class="slider_item loading fullscreen">
+            <img class="slider_image lazy fullscreen" title="{{ client.img_title }}" alt="{{ client.img_alt }}"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-src="assets/images/portfolio/portfolio_{{ client.handle }}.jpg" />
+            <figcaption class="slider_overlay fullscreen">
+              <h4>
+                {{ client.name }}
+              </h4>
+              <p>
+                {{ client.desc }}
+              </p>
+              <a class="btn bgc bgc--red" href="{{ client.url }}" target="_blank">
+                Zur Seite &rarr;
+              </a>
+            </figcaption>
+          </figure>
+          {% if forloop.last %}
+          {% assign fundevogel = site.data.portfolio[0] %}
+          <noscript>
+            <div class="has-bg-image fullscreen" style="background-image: url('assets/images/portfolio/portfolio_{{ fundevogel.handle }}.jpg')">
+              <div class="slider_overlay fullscreen">
+                <h4>
+                  {{ fundevogel.name }}
+                </h4>
+                <p>
+                  {{ fundevogel.desc }}
+                </p>
+                <a class="btn bgc bgc--red" href="{{ fundevogel.url }}" target="_blank">
+                  Zur Seite &rarr;
+                </a>
+              </div>
+            </div>
+          </noscript>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

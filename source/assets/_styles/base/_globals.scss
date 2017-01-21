@@ -1,139 +1,20 @@
-//
-// Globals
-//
-
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-}
-
-*,
-*:before,
-*:after {
+html {
   box-sizing: border-box;
 }
 
-::selection {
-  color: $white;
-  background: $accent;
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
 }
 
-html {
-  font-size: 16px;
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-
-  @include min-width(medium) {
-    font-size: 18px;
-  }
-
-  @include min-width(xlarge) {
-    font-size: 20px;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 html,
 body {
   height: 100%;
-  width: 100%;
-}
-
-body {
-  background-color: $white;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.6;
-  color: $darkGrey;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  // -webkit-text-size-adjust: 100%;
-  // -ms-text-size-adjust: 100%;
-}
-
-a {
-  color: $accent;
-  position: relative;
-  text-decoration: none;
-  transition: color $global-transition, opacity $global-transition;
-  cursor: pointer;
-  outline: 0;
-
-  &:hover {
-    color: $accent--dark;
-  }
-}
-
-input,
-select,
-textarea {
-  cursor: pointer;
-  transition: $global-transition;
-  background: transparent;
-  border: 1px solid $white;
-  border-radius: $global-radius;
-  font: inherit;
-  color: inherit;
-}
-
-option {
-  background-color: $darkGrey;
-  padding: 0 12px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
-  display: inline-block;
-  vertical-align: middle;
-  transition: $global-transition;
-  border-radius: inherit;
-}
-
-button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  transition: $global-transition;
-  border-radius: $global-radius;
-
-  // &::-moz-focus-inner {
-  //   border: 0;
-  //   padding: 0;
-  // }
-}
-
-ul {
-  margin-left: 15px;
-
-  &.no-margin {
-    margin-left: 0;
-  }
-}
-
-li {
-  list-style: none;
-  padding-left: 20px;
-  background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12" width="8" height="12"><path fill="#d32f2f" d="M0 8h4v4H0zm4-4h4v4H4zM0 0h4v4H0z"/></svg>') no-repeat left center;
-  // background: url('/assets/images/icons/bullets.svg') no-repeat left center;
-
-  .no-bullets & {
-    background: none;
-    padding-left: 0;
-  }
-}
-
-hr {
-  width: 100%;
-  border: 0;
-  height: 1.5px;
-  background-color: lighten($lightGrey, 15%); // auslagern in farbe
-  margin: $global-padding 0 0;
-}
-
-iframe {
-  max-width: 100%;
 }

@@ -20,6 +20,15 @@
       visibility: visible;
       position: relative;
     }
+
+    &.loading {
+      color: transparent;
+      background: $dark-gray url('assets/images/ajax-loader.gif') no-repeat center center;
+
+      .slider_overlay {
+        visibility: hidden;
+      }
+    }
   }
 
   &_image {
@@ -28,12 +37,15 @@
   }
 
   &_overlay {
-    transition: $global-transition;
+    transition: opacity $base-duration + 250ms $base-timing;
     opacity: 0;
     position: absolute;
     top: 0px;
-    padding: calc(7.5% + 15px);
-    text-align: center;
+    padding: 2 * $base-spacing;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &:hover .loaded &_overlay,

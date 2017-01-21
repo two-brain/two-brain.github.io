@@ -1,0 +1,45 @@
+.services {
+  padding-top: 3 * $base-spacing;
+  background: $light-gray;
+  text-align: center;
+
+  p {
+    font-size: 22px;
+  }
+}
+
+.item {
+  padding: 2em 1em;
+  margin-top: $small-spacing;
+  background: #fff;
+  border: 1px solid darken($light-gray, 10%);
+  border-radius: $base-border-radius + 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include min-width(medium) {
+    @include gallery(4 of 8);
+  }
+
+  @include min-width(large) {
+    @include gallery(4 of 12);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@each $slug, $color in zip($service-slug, $service-color) {
+
+  .#{$slug} {
+    color: $color;
+  }
+}

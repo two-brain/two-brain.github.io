@@ -1,0 +1,12 @@
+.fade-link,
+.fade-links a {
+  opacity: 0.8;
+  transition: opacity $base-duration, color $base-duration;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}

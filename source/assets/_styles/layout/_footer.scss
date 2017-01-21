@@ -3,60 +3,22 @@
 //
 
 .site-footer {
-  // flex: none;
-  // background: $darkGrey;
-  // border-top: 5px solid $accent--dark;
+  color: darken(#fff, 50%);
+  padding: 2 * $small-spacing $base-spacing;
+  font-size: 0.75rem;
+  background: $dark-gray;
 
-  a:hover:not(.btn) {
-    text-decoration: underline;
+  li + li {
+    margin-left: $base-spacing;
   }
 
-  &--primary {
-    font-size: 16px;
-    padding-bottom: $global-padding;
-  }
-
-  &--secondary {
-    font-size: 14px;
-    padding: $global-padding 0;
-    background: $veryDarkGrey;
-    text-align: center;
+  svg {
+    vertical-align: baseline;
+    position: relative;
+    top: 1px;
   }
 }
 
-.quick {
-  @include span(6 of 12);
-  padding-top: $global-padding;
-
-  &:last-child {
-    @include last;
-  }
-
-  &-links {
-    @include clearfix;
-
-    @include min-width(logo-break) {
-      @include span(6 of 12);
-    }
-  }
-}
-
-.blog-entry {
-  @include min-width(logo-break) {
-    @include span(6 of 12 last);
-  }
-}
-
-.copyright,
-.legal {
-  display: inline-block;
-
-  @include max-width(logo-breakMax) {
-    width: 100%;
-  }
-}
-
-.call-us {
-  padding: $section-padding 0;
-  border-top: 5px solid $accent--dark;
+.copyright {
+  margin-bottom: 0;
 }

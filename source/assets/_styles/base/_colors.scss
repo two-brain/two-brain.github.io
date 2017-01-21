@@ -1,50 +1,19 @@
-//
-// Colors
-//
+.bgc {
 
-.bg {
+  &,
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    color: #fff;
+    fill: #fff;
+  }
 
-	&--white {
-		background-color: $white;
+  &--teal {
+    background: $accent-color;
+  }
 
-		&,
-		a {
-			color: $darkGrey;
-			fill: $accent;
-		}
-	}
-
-	&--dark {
-		background-color: $darkGrey;
-
-		&,
-		a {
-			color: $white;
-			fill: $white;
-		}
-	}
-
-	&--red {
-		background-color: $accent;
-
-		&,
-		a:not(.btn) {
-			color: $white;
-			fill: $white;
-		}
-
-		h1, h2 {
-			text-shadow: $global-text-shadow;
-		}
-	}
-
-	&--light {
-		background-color: $lightGrey;
-		fill: $darkGrey;
-	}
+  &--red {
+    background: $action-color;
+  }
 }
-
-h1.bg--red,
-h2.bg--red {
-		text-shadow: $global-text-shadow;
-	}

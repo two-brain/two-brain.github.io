@@ -1,0 +1,26 @@
+//
+// Support classes
+//
+
+.relative {
+	position: relative;
+}
+
+// .filler {
+// 	width: 100%;
+// 	height: $header-height;
+// 	position: absolute;
+// 	bottom: 0px;
+// 	z-index: z(sewage);
+// }
+
+.fullscreen {
+	height: 100%;
+	width: 100%;
+}
+
+.has-bg-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
