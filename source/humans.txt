@@ -9,7 +9,7 @@ _  __/_ | /| / /  __ \________  __ \_  ___/  __ `/_  /__  __ \
 /* SUCH TEAM */
 Maintainer: {{ site.author.name }}
 Mail: {{ site.author.mail }}
-Location: {{ site.author.location }}
+Location: {{ site.location }}
 
 /* SO THANKFUL */
 {% for contributor in site.data.contributions %}
