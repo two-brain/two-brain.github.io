@@ -16,7 +16,7 @@ if (document.getElementById('slider')) {
       hidePreviousClass: 'slider_item--hide-previous',
       hideNextClass: 'slider_item--hide-next',
     });
-    var autoPlayMs = 2000,
+    var autoPlayMs = 4500,
     nextTimeout,
     loadNext = function() {
       var nextIndex = (slider.currentItemIndex + 1) % slider.allItemsArray.length;
