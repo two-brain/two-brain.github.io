@@ -13,7 +13,7 @@
       url: https://github.com/peduarte/wallop
 
 - name: Chris Ferdinandi
-  url: https://github.com/cferdinandi
+  url: https://gomakethings.com/
   projects:
     - name: Smooth Scroll
       url: https://github.com/cferdinandi/smooth-scroll
@@ -25,6 +25,12 @@
   projects:
     - name: Blazy
       url: https://github.com/dinbror/blazy
+
+- name: Sol Matas
+  url: http://www.solmatas.com/
+  projects:
+    - name: Bitter (Font)
+      url: http://www.huertatipografica.com/en
 
 - name: Christian Robertson
   url: http://christianrobertson.com/
@@ -39,7 +45,7 @@
       url: https://github.com/chrissimpkins/Hack
 
 - name: Nick Williams
-  url: https://twitter.com/WickyNilliams
+  url: http://wicky.nillia.ms/
   projects:
     - name: Headroom.js
       url: https://github.com/WickyNilliams/headroom.js
