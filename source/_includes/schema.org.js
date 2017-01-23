@@ -1,0 +1,19 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "Two-Brain",
+  "url": "{{ site.url }}"
+}, {
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Two-Brain",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/images/logo.png",
+  "sameAs": ["https://github.com/two-brain/", "https://twitter.com/twobrain_design"],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "hello@twobrain.io",
+    "contactType": "customer service",
+    "availableLanguage": ["German", "English"]
+  }]
+}
