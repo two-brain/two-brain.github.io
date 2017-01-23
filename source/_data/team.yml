@@ -1,0 +1,30 @@
+mfolkers:
+  - name: Website
+    title: Website besuchen
+    url: http://martinfolkers.de
+
+  - name: GitHub
+    title: Auf Github besuchen
+    url: https://github.com/S1SYPHOS
+
+wadamow:
+  - name: Website
+    title: Website besuchen
+    url: http://wasiliadamow.com/
+
+  - name: Xing
+    title: LinkedIn-Profil anzeigen
+    url: https://www.linkedin.com/in/wasiliadamow
+
+legacy:
+  - name: LinkedIn
+    title: LinkedIn-Profil anzeigen
+    url: https://www.linkedin.com/in/wasiliadamow
+
+  - name: Stack-Overflow
+    title: Auf Stack-Overflow besuchen
+    url: https://stackoverflow.com/users/1911023/gtrfnkn
+
+  - name: Twitter
+    title: Auf Twitter folgen
+    url: https://twitter.de/twobrain_design
