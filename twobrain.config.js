@@ -18,6 +18,7 @@ module.exports = {
     sass:      '_styles',
     jsSrc:     '_scripts',
     imagesSrc: '_images',
+    includes:  'source/_includes'
   },
 
   jekyll: {

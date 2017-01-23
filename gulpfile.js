@@ -22,10 +22,10 @@ var pxtorem      = require('postcss-pxtorem');
 var sass         = require('gulp-sass');
 var size         = require('gulp-size');
 var sourcemaps   = require('gulp-sourcemaps');
+var svgmin       = require('gulp-svgmin');
 var uglify       = require('gulp-uglify');
 var watch        = require('gulp-watch');
 var webpack      = require('webpack-stream');
-// var webpackYO    = require('webpack');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -155,19 +155,30 @@ gulp.task('sass', function () {
 /**
  * Images
  */
-gulp.task('imagemin', function () {
+
+ gulp.task('svgmin', function () {
+   return gulp.src(paths.imagesSrc + '/_svg/logo.svg')
+     .pipe(svgmin({
+       plugins: [{
+         cleanupNumericValues: {
+           floatPrecision: 3
+         }
+       }]
+     }))
+     .pipe(gulp.dest(config.paths.includes));
+ });
+
+gulp.task('imagemin', ['svgmin'], function () {
   return gulp.src(paths.imagesSrc + '/**/*')
     .pipe(plumber())
     .pipe(newer(paths.images))
     .pipe(imagemin({
       ignorePattern: '.svg',
       progressive: true,
-      // svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
     .pipe(gulp.dest(paths.images));
 });
-
 
 /**
  * Linting JS

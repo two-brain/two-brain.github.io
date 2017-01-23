@@ -12,11 +12,7 @@
     "start": "gulp",
     "test": "gulp test",
     "build": "gulp build --production",
-    "imagemin": "gulp imagemin",
-    "production": "gulp --production",
-    "sass": "gulp sass",
-    "server": "gulp server",
-    "server-production": "gulp server --production"
+    "production": "gulp --production"
   },
   "keywords": [
     "Autoprefixer",
@@ -52,6 +48,7 @@
     "gulp-postcss": "^6.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
+    "gulp-svgmin": "^1.2.3",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.11",
     "imagemin-pngquant": "^5.0.0",
