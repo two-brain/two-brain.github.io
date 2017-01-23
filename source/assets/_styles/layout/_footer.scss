@@ -1,15 +1,31 @@
-//
-// Footer
-//
-
 .site-footer {
   color: darken(#fff, 50%);
   padding: 2 * $small-spacing $base-spacing;
   font-size: 0.75rem;
   background: $dark-gray;
 
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    @include max-width(mediumMax) {
+      flex-direction: column;
+      line-height: 2.5;
+    }
+  }
+
   li + li {
-    margin-left: $base-spacing;
+    @include min-width(medium) {
+      margin-left: $base-spacing;
+    }
   }
 
   svg {
@@ -17,8 +33,4 @@
     position: relative;
     top: 1px;
   }
-}
-
-.copyright {
-  margin-bottom: 0;
 }

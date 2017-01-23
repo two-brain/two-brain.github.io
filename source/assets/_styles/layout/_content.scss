@@ -1,10 +1,6 @@
-//
-// Content
-//
-
-.clearfix {
-  @include clearfix;
-}
+// .clearfix {
+//   @include clearfix;
+// }
 
 .wrap {
   @include container;
@@ -25,36 +21,15 @@
     @include min-width(1440) {
       max-width: 64rem; // * 20 = 1280px
     }
-
   }
 }
-
-.site-content {
-  // flex: 1 0 auto;
-  padding-top: $header-height;
-
-  .static-header & {
-    // padding-top: $header-height;
-  }
-}
-
 
 .page {
   padding: 2em 0 3em;
 
   &-header {
-    padding: $base-spacing 0;
+    padding: 5 * $base-spacing 0 $base-spacing;
     text-align: center;
-
-    svg {
-      width: $page-logo-diameter--small;
-      height: $page-logo-diameter--small;
-
-      @include min-width(logo-break) {
-        width: $page-logo-diameter;
-        height: $page-logo-diameter;
-      }
-    }
   }
 
   h2 {

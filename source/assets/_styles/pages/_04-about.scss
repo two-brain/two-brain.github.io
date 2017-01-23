@@ -1,0 +1,36 @@
+.about {
+  padding: 3 * $base-spacing 0;
+  background: $accent-color;
+  color: #fff;
+
+  .wrap {
+    max-width: 700px;
+  }
+
+  .image-area {
+    text-align: center;
+  }
+
+  h3 {
+    padding-left: 0.5em;
+    border-left: 5px solid $action-color;
+  }
+
+  p {
+    padding-left: $base-spacing;
+    font-size: 22px;
+  }
+}
+
+.portrait {
+  padding: 2 * $base-spacing 0;
+
+  .links {
+    margin-top: $base-spacing;
+    text-align: right;
+
+    .btn + .btn {
+      margin-left: $small-spacing;
+    }
+  }
+}

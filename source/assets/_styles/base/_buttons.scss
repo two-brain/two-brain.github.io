@@ -3,10 +3,12 @@
   border-radius: 25px;
   font-weight: 500;
   margin-top: $small-spacing;
+  color: #fff;
 
   &:hover,
   &:focus,
   &:active {
+    color: #fff;
     background-color: shade($action-color, 20%);
   }
 
@@ -16,5 +18,10 @@
     &:active {
       background-color: shade($accent-color, 20%);
     }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    background: $dark-gray;
   }
 }

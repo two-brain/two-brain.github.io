@@ -1,5 +1,5 @@
 .services {
-  padding-top: 3 * $base-spacing;
+  padding: 4 * $base-spacing 0;
   background: $light-gray;
   text-align: center;
 
@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
 
-  @include min-width(medium) {
+  @include min-width(600) {
     @include gallery(4 of 8);
   }
 

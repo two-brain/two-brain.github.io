@@ -1,13 +1,26 @@
-.intro {
-  padding: 3 * $base-spacing 0 8 * $base-spacing;
-  background: $action-color;
-  color: #fff;
+.tagline {
+  padding: 8 * $base-spacing 0 10 * $base-spacing;
+}
 
-  .text-block {
-    // max-width: 640px;
+.philosophy {
+  margin-top: -(6 * $base-spacing);
+  padding-bottom: $base-spacing;
+  text-align: center;
+}
 
-    p {
-      font-size: 36px;
-    }
+.claim {
+  background: #fff;
+  border-radius: $base-border-radius + 1px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  h2 {
+    padding: 1em 0.5em;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+  }
+
+  p {
+    padding: 1em $base-spacing $base-spacing;
+    margin: 0;
+    font-size: 22px;
   }
 }

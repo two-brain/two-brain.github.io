@@ -1,5 +1,5 @@
 <section class="portfolio relative">
-  <div class="relative bgc bgc--teal">
+  <div class="relative bgc bgc--red">
     <div class="wrap full">
       <div class="portfolio_text">
         <strong>Für ein besseres Web</strong>
@@ -7,11 +7,11 @@
           Ich entwerfe, errichte und betreue <strong>Webprojekte</strong> für kleine Unternehmen sowie Einzelpersonen. Gern saniere ich auch bestehende Internetseiten, indem ich sie optisch überarbeite <strong>(Redesign)</strong> oder ihre technischen Grundstrukturen modernisiere <strong>(Relaunch)</strong>.
         </p>
         <p>
-          Darüber hinaus beteilige ich mich an der Entwicklung von freier und quelloffener Software. Gern unterstütze ich Projekte mit toller Idee, aber knappem Geldbeutel <strong>pro bono</strong>, wenn mein Zeitplan dies zulässt.
+          Projekte mit toller Idee, aber knappem Geldbeutel unterstütze ich gern im Rahmen meiner Möglichkeiten, außerdem beteilige ich mich an der Entwicklung von freier und quelloffener Software.
         </p>
       </div>
     </div>
-    <div class="portfolio_media bgc bgc--dark">
+    <div class="portfolio_media">
       <div id="slider" class="slider slider--fade fullscreen">
         <div class="slider-list fullscreen">
           {% for client in site.data.portfolio %}
@@ -20,13 +20,13 @@
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-src="assets/images/portfolio/portfolio_{{ client.handle }}.jpg" />
             <figcaption class="slider_overlay fullscreen">
-              <h4>
+              <h3>
                 {{ client.name }}
-              </h4>
+              </h3>
               <p>
                 {{ client.desc }}
               </p>
-              <a class="btn bgc bgc--red" href="{{ client.url }}" target="_blank">
+              <a class="btn bgc--teal" href="{{ client.url }}" target="_blank">
                 Zur Seite &rarr;
               </a>
             </figcaption>
@@ -36,13 +36,13 @@
           <noscript>
             <div class="has-bg-image fullscreen" style="background-image: url('assets/images/portfolio/portfolio_{{ fundevogel.handle }}.jpg')">
               <div class="slider_overlay fullscreen">
-                <h4>
+                <h3>
                   {{ fundevogel.name }}
-                </h4>
+                </h3>
                 <p>
                   {{ fundevogel.desc }}
                 </p>
-                <a class="btn bgc bgc--red" href="{{ fundevogel.url }}" target="_blank">
+                <a class="btn bgc--teal" href="{{ fundevogel.url }}" target="_blank">
                   Zur Seite &rarr;
                 </a>
               </div>

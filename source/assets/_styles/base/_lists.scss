@@ -3,27 +3,6 @@ ol {
   list-style-type: none;
 }
 
-// dl {
-//   margin: 0;
-// }
-//
-// dt {
-//   font-weight: 600;
-//   margin: 0;
-// }
-//
-// dd {
-//   margin: 0;
-// }
-
-.inline-list {
-  display: flex;
-
-  .pull-right {
-    margin-left: auto;
-  }
-}
-
 .has-bullets {
   margin-left: $base-spacing;
   margin-bottom: 0.5em;

@@ -1,0 +1,47 @@
+<section class="about">
+  <div class="wrap">
+    <div id="martin-folkers" class="portrait">
+      <div class="image-area">
+        <img class="round lazy" title="" alt=""
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="{{ site.baseurl }}/assets/images/mfolkers.jpg"
+        width="200" height="200">
+        <noscript>
+          <img class="round" title="" alt=""
+          src="{{ site.baseurl }}/assets/images/mfolkers.jpg"
+          width="200" height="200">
+        </noscript>
+      </div>
+      <h3>Martin</h3>
+      <p>
+        .. ist am liebsten einfach Papa zweier Söhne und studiert Jura. Wenn er davon eine Auszeit braucht, <strong>gestaltet, optimiert und betreut er Webseiten</strong> - wenn er davon wiederum eine Auszeit braucht, lernt er Altgriechisch.
+      </p>
+      <div class="links">
+        <span title="Meine persönliche Seite befindet sich momentan im Aufbau" class="btn is-disabled">Website &rarr;</span>
+        <a class="btn bgc--red" href="https://github.com/S1SYPHOS" title="Auf Github besuchen" target="_blank">GitHub &rarr;</a>
+      </div>
+    </div>
+    <div id="wasili-adamow" class="portrait">
+      <div class="image-area">
+        <img class="round lazy" title="" alt=""
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="{{ site.baseurl }}/assets/images/wadamow.jpg"
+        width="200" height="200">
+        <noscript>
+          <img class="round" title="" alt=""
+          src="{{ site.baseurl }}/assets/images/wadamow.jpg"
+          width="200" height="200">
+        </noscript>
+      </div>
+      <h3>Wasili</h3>
+      <p>
+        .. spricht Russisch ebenso fließend wie Java und unterstützt mich in den Bereichen <strong>Web-, Software- & App-Entwicklung</strong> mit freier Zuarbeit. Wenn er gerade kein Startup gründet, spielt er eine Runde Basketball im Park.
+      </p>
+      <div class="links">
+        {% for item in site.data.team.wadamow %}
+          <a class="btn bgc bgc--red" href="{{ item.url }}" title="{{ item.title }}" target="_blank">{{ item.name }} &rarr;</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,9 +1,9 @@
-//
-// Wallop slider
-//
-
 .slider {
   overflow: hidden;
+
+  h3 {
+    font-weight: 500;
+  }
 
   &_item {
     visibility: hidden;

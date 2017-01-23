@@ -1,17 +1,13 @@
 .testimonial {
-  padding: 5 * $base-spacing 0 3 * $base-spacing;
+  padding: 4 * $base-spacing 0;
   text-align: left;
 
   .image-area {
     margin-bottom: $small-spacing;
-    
+
     @include min-width(large) {
       margin: -$small-spacing $base-spacing 0 (-(2 * $small-spacing));
     }
-  }
-
-  .round {
-    border-radius: 50%;
   }
 
   .text-block {

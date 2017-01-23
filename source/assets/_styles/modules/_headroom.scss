@@ -1,8 +1,8 @@
 .headroom {
-  transition: transform $base-duration $base-timing;
-  // will-change: transform;
+  transition: transform 2 * $base-duration $base-timing;
+  will-change: transform;
 
 	&--unpinned {
-		transform: translateY(-100%);
+		transform: translate3d(0, -200%, 0);
 	}
 }
