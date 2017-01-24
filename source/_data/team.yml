@@ -1,13 +1,11 @@
-mfolkers:
-  - name: Website
-    title: Website besuchen
-    url: http://martinfolkers.de
+martin:
 
   - name: GitHub
     title: Auf Github besuchen
     url: https://github.com/S1SYPHOS
 
-wadamow:
+wasili:
+
   - name: Website
     title: Website besuchen
     url: http://wasiliadamow.com/
@@ -17,6 +15,11 @@ wadamow:
     url: https://www.linkedin.com/in/wasiliadamow
 
 legacy:
+
+  - name: Website
+    title: Website besuchen
+    url: http://martinfolkers.de
+
   - name: LinkedIn
     title: LinkedIn-Profil anzeigen
     url: https://www.linkedin.com/in/wasiliadamow

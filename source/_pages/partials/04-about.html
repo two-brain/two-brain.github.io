@@ -19,7 +19,9 @@
       </p>
       <div class="links">
         <span title="Meine persönliche Seite befindet sich momentan im Aufbau" class="btn is-disabled">Website &rarr;</span>
-        <a class="btn bgc--red" href="https://github.com/S1SYPHOS" title="Auf Github besuchen" target="_blank">GitHub &rarr;</a>
+        {% for item in site.data.team.martin %}
+          <a class="btn bgc bgc--red" href="{{ item.url }}" title="{{ item.title }}" target="_blank">{{ item.name }} &rarr;</a>
+        {% endfor %}
       </div>
     </div>
     <div id="wasili-adamow" class="portrait">
