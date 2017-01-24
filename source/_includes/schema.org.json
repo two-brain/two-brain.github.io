@@ -10,10 +10,10 @@
   "url": "{{ site.url }}",
   "logo": "{{ site.url }}/assets/images/logo.png",
   "sameAs": ["https://github.com/two-brain/", "https://twitter.com/twobrain_design"],
-  "contactPoint": [{
+  "contactPoint": {
     "@type": "ContactPoint",
     "email": "hello@twobrain.io",
     "contactType": "customer service",
     "availableLanguage": ["German", "English"]
-  }]
+  }
 }

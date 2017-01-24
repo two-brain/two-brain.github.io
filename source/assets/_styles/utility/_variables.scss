@@ -40,7 +40,8 @@ $z-layers: (
 );
 
 // Typography
-$base-font-family: 'Roboto', sans-serif;
+$critical-font-family: RobotoSubset, sans-serif;
+$base-font-family: Roboto, sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes

@@ -1,9 +1,3 @@
-<style>
-  {% include fonts.css %}
-  {% include main.css %}
-</style>
-
-<script>
 (function() {
 
 	// Optimization for Repeat Views
@@ -38,4 +32,3 @@
 		});
 	});
 })();
-</script>

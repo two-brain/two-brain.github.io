@@ -6,7 +6,14 @@
   {% if page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
   <link rel="preload" href="/assets/fonts/Roboto-Subset.woff2" as="font" type="font/woff2" crossorigin>
 
-  {% include font-loading.html %}
+  <style type="text/css" media="all">
+    {% include main.css %}
+  </style>
+
+  <script type="text/javascript">
+    {% include font-loader.js %}
+  </script>
+
   <noscript>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
   </noscript>
@@ -35,7 +42,7 @@
   </title>
 
   <script type="application/ld+json">
-    {% include schema.org.js %}
+    {% include schema.org.json %}
   </script>
 
 </head>
