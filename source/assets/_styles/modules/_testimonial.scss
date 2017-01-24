@@ -5,13 +5,13 @@
   .image-area {
     margin-bottom: $small-spacing;
 
-    @include min-width(large) {
+    @include min-width(medium) {
       margin: -$small-spacing $base-spacing 0 (-(2 * $small-spacing));
     }
   }
 
   .text-block {
-    @include min-width(large) {
+    @include min-width(medium) {
       flex: 1;
       padding-left: $small-spacing;
     }
@@ -22,15 +22,25 @@
     flex-direction: column;
     text-align: center;
 
-    @include min-width(large) {
+    @include min-width(medium) {
       flex-direction: row;
       text-align: left;
     }
 
     &:before {
+      content: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32"><path fill="#5eb2b2" d="M0 16v16h16V16H8s0-8 8-8V0S0 0 0 16zm40-8V0S24 0 24 16v16h16V16h-8s0-8 8-8z"/></svg>');
+      position: relative;
+      left: -65px;
+      bottom: -35px;
+      z-index: 10;
+
+      @include min-width(medium) {
+        left: 0;
+        bottom: 20px;
+      }
+
       @include min-width(large) {
-        content: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32"><path fill="#5eb2b2" d="M0 16v16h16V16H8s0-8 8-8V0S0 0 0 16zm40-8V0S24 0 24 16v16h16V16h-8s0-8 8-8z"/></svg>');
-        z-index: 10;
+        bottom: 10px;
       }
     }
   }
@@ -38,6 +48,11 @@
   q {
     display: block;
     font-size: 1.3rem;
+
+    strong,
+    b {
+      font-weight: 500;
+    }
 
     &:before,
     &:after {

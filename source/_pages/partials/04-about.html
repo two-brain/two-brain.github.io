@@ -3,13 +3,14 @@
     <div id="martin-folkers" class="portrait">
       <div class="image-area">
         <img class="img round lazy" title="Martin (two-brain)" alt="Foto von Martin aka two-brain"
-        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-src="{{ site.baseurl }}/assets/images/mfolkers.jpg"
-        width="200" height="200">
+           sizes="(min-width: 64em) 200px, 150px"
+           data-srcset="{{ site.baseurl }}/assets/images/martin-150x150.jpg 150w, {{ site.baseurl }}/assets/images/martin-200x200.jpg 200w, {{ site.baseurl }}/assets/images/martin.jpg 400w"
+           data-src="{{ site.baseurl }}/assets/images/martin-200x200.jpg">
         <noscript>
           <img class="round" title="Martin (two-brain)" alt="Foto von Martin aka two-brain"
-          src="{{ site.baseurl }}/assets/images/mfolkers.jpg"
-          width="200" height="200">
+            sizes="(min-width: 64em) 200px, 150px"
+            data-srcset="{{ site.baseurl }}/assets/images/martin-150x150.jpg 150w, {{ site.baseurl }}/assets/images/martin-200x200.jpg 200w, {{ site.baseurl }}/assets/images/martin.jpg 400w"
+            data-src="{{ site.baseurl }}/assets/images/martin-200x200.jpg">
         </noscript>
       </div>
       <h3>Martin</h3>
@@ -24,13 +25,14 @@
     <div id="wasili-adamow" class="portrait">
       <div class="image-area">
         <img class="img round lazy" title="Wasili" alt="Foto von Wasili"
-        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-src="{{ site.baseurl }}/assets/images/wadamow.jpg"
-        width="200" height="200">
+        sizes="(min-width: 64em) 200px, 150px"
+        data-srcset="{{ site.baseurl }}/assets/images/wasili-150x150.jpg 150w, {{ site.baseurl }}/assets/images/wasili-200x200.jpg 200w, {{ site.baseurl }}/assets/images/wasili.jpg 400w"
+        data-src="{{ site.baseurl }}/assets/images/wasili-200x200.jpg">
         <noscript>
           <img class="round" title="Wasili" alt="Foto von Wasili"
-          src="{{ site.baseurl }}/assets/images/wadamow.jpg"
-          width="200" height="200">
+            sizes="(min-width: 64em) 200px, 150px"
+            data-srcset="{{ site.baseurl }}/assets/images/wasili-150x150.jpg 150w, {{ site.baseurl }}/assets/images/wasili-200x200.jpg 200w, {{ site.baseurl }}/assets/images/wasili.jpg 400w"
+            data-src="{{ site.baseurl }}/assets/images/wasili-200x200.jpg">
         </noscript>
       </div>
       <h3>Wasili</h3>
@@ -38,7 +40,7 @@
         .. spricht Russisch ebenso fließend wie Java und unterstützt mich in den Bereichen <strong>Web-, Software- & App-Entwicklung</strong> mit freier Zuarbeit. Wenn er gerade kein Startup gründet, spielt er eine Runde Basketball im Park.
       </p>
       <div class="links">
-        {% for item in site.data.team.wadamow %}
+        {% for item in site.data.team.wasili %}
           <a class="btn bgc bgc--red" href="{{ item.url }}" title="{{ item.title }}" target="_blank">{{ item.name }} &rarr;</a>
         {% endfor %}
       </div>
