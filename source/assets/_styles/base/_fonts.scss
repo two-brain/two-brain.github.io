@@ -37,20 +37,47 @@ body {
 	font-family: sans-serif;
 }
 
-.fonts-stage-1 body {
-	font-family: $critical-font-family;
-	font-weight: 300;
-	font-style: normal;
+.fonts-stage-1 {
+
+	body {
+		font-family: $critical-font-family;
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: $critical-font-family;
+		font-weight: 300;
+	}
 }
 
-.fonts-stage-2 body {
-  font-family: $base-font-family;
-  font-weight: 300;
+
+.fonts-stage-2 {
+
+	body {
+	  font-family: $base-font-family;
+	}
+
+	h1,
+	h2,
+	h3 {
+	  font-family: $heading-font-family;
+	}
 }
 
-.fonts-stage-2 h1,
-.fonts-stage-2 h2,
-.fonts-stage-2 h3 {
-  font-family: $heading-font-family;
-  font-weight: 300;
+.no-js {
+
+	body {
+		font-family: $base-font-family;
+		font-weight: 300;
+	}
+
+	h1,
+	h2,
+	h3 {
+	  font-family: $heading-font-family;
+		font-weight: 300;
+	}
 }

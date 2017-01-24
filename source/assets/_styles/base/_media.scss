@@ -16,3 +16,7 @@ svg {
     overflow: hidden;
   }
 }
+
+.no-js & .img {
+  display: none;
+}
