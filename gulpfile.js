@@ -8,13 +8,13 @@ var autoprefixer = require('autoprefixer');
 var browsersync  = require('browser-sync').create();
 var del          = require('del');
 var cp           = require('child_process');
+var eslint       = require('gulp-eslint');
 var gulp         = require('gulp');
 var htmlmin      = require('gulp-htmlmin');
 var imagemin     = require('gulp-imagemin');
 var Manifest     = require('assets-webpack-plugin');
 var named        = require('vinyl-named');
 var newer        = require('gulp-newer');
-var jshint       = require('gulp-jshint');
 var plumber      = require('gulp-plumber');
 var pngquant     = require('imagemin-pngquant');
 var postcss      = require('gulp-postcss');
@@ -27,7 +27,7 @@ var uglify       = require('gulp-uglify');
 var watch        = require('gulp-watch');
 var webpack      = require('webpack-stream');
 
-var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 // Load configurations & set variables
 var config       = require('./twobrain.config.js');
@@ -37,12 +37,9 @@ var paths        = {};
 var entry        = [];
 
 
-
-
-
 // Load PostCSS modules
 var processors   = [
-  autoprefixer({ browsers: config.autoprefixer.browsers }),
+  autoprefixer({browsers: config.autoprefixer.browsers}),
   // require('css-mqpacker')(),
   require('postcss-merge-rules'),
   pxtorem( config.pxtorem.options )
@@ -51,13 +48,13 @@ var processors   = [
 /**
  * Set default & build tasks
  */
-Object.keys(config.tasks).forEach(function (key) {
+Object.keys(config.tasks).forEach(function(key) {
   if (config.tasks[key]) {
     tasks.push(key === 'webpack' ? '_' + key : key);
   }
 });
 
-Object.keys(config.tasks).forEach(function (key) {
+Object.keys(config.tasks).forEach(function(key) {
   if (config.tasks[key] && key !== 'server') {
     build.push(key);
   }
@@ -66,7 +63,7 @@ Object.keys(config.tasks).forEach(function (key) {
 /**
  * Paths
  */
-Object.keys(config.paths).forEach(function (key) {
+Object.keys(config.paths).forEach(function(key) {
   if (key !== 'assets') {
     if (config.paths.assets === '') {
       paths[key] = './' + config.paths[key];
@@ -99,7 +96,7 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', function(done) {
   var jekyllConfig = config.jekyll.config.default;
   if (argv.production) {
     process.env.JEKYLL_ENV = 'production';
@@ -114,7 +111,7 @@ gulp.task('jekyll-build', function (done) {
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
   browsersync.notify('Rebuilded Jekyll');
   browsersync.reload();
 });
@@ -127,7 +124,7 @@ gulp.task('server', ['jekyll-build'], function() {
     port: config.port,
     server: {
       baseDir: config.paths.dest,
-    }
+    },
   });
 });
 
@@ -140,11 +137,11 @@ gulp.task('html', function() {
 /**
  * Sass
  */
-gulp.task('sass', function () {
+gulp.task('sass', function() {
   return gulp.src(paths.sass + '/*.scss')
     .pipe(sass({
       outputStyle: config.sass.outputStyle,
-      includePaths: ['node_modules/susy/sass']
+      includePaths: ['node_modules/susy/sass'],
     }).on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(size())
@@ -156,26 +153,26 @@ gulp.task('sass', function () {
  * Images
  */
 
- gulp.task('svgmin', function () {
+ gulp.task('svgmin', function() {
    return gulp.src(paths.imagesSrc + '/_svg/logo.svg')
      .pipe(svgmin({
        plugins: [{
          cleanupNumericValues: {
-           floatPrecision: 3
-         }
-       }]
+           floatPrecision: 3,
+         },
+       }],
      }))
      .pipe(gulp.dest(config.paths.includes));
  });
 
-gulp.task('imagemin', ['svgmin'], function () {
+gulp.task('imagemin', ['svgmin'], function() {
   return gulp.src(paths.imagesSrc + '/**/*')
     .pipe(plumber())
     .pipe(newer(paths.images))
     .pipe(imagemin({
       ignorePattern: '.svg',
       progressive: true,
-      use: [pngquant()]
+      use: [pngquant()],
     }))
     .pipe(gulp.dest(paths.images));
 });
@@ -184,10 +181,11 @@ gulp.task('imagemin', ['svgmin'], function () {
  * Linting JS
  */
 
-gulp.task('jshint', function() {
+gulp.task('eslint', function() {
   return gulp.src(paths.jsSrc + '/**/*')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
 });
 
 
@@ -196,7 +194,7 @@ gulp.task('jshint', function() {
  *
  * Bundle JavaScript files
  */
-gulp.task('webpack', ['jshint'], function () {
+gulp.task('webpack', function() {
   return gulp.src(entry)
     .pipe(plumber())
     .pipe(named())
@@ -215,9 +213,9 @@ gulp.task('webpack', ['jshint'], function () {
           filename: 'assets.json',
           path: './source/_data',
           fullPath: true,
-          prettyPrint: true
-        })
-      ]
+          prettyPrint: true,
+        }),
+      ],
     }))
     .pipe(uglify())
     .pipe(size())
@@ -225,7 +223,7 @@ gulp.task('webpack', ['jshint'], function () {
 });
 
 // For internal use only
-gulp.task('_webpack', function () {
+gulp.task('_webpack', function() {
   argv.watch = true;
   gulp.start('webpack');
 });
@@ -233,7 +231,7 @@ gulp.task('_webpack', function () {
 /**
  * Build
  */
-gulp.task('build', build, function (done) {
+gulp.task('build', build, function(done) {
   var jekyllConfig = config.jekyll.config.default;
   if (argv.production) {
     process.env.JEKYLL_ENV = 'production';
@@ -249,15 +247,15 @@ gulp.task('build', build, function (done) {
  * Default task, running just `gulp` will minify the images, compile the sass, js, and jekyll site,
  * launch BrowserSync, and watch files. Tasks can be configured by twobrain.config.json.
  */
-gulp.task('default', tasks, function () {
+gulp.task('default', tasks, function() {
   if (config.tasks.imagemin) {
-    watch(paths.imagesSrc + '/**/*', function () {
+    watch(paths.imagesSrc + '/**/*', function() {
       gulp.start('imagemin');
     });
   }
 
   if (config.tasks.sass) {
-    watch(paths.sass + '/**/*', function () {
+    watch(paths.sass + '/**/*', function() {
       gulp.start('sass');
     });
   }
@@ -277,8 +275,8 @@ gulp.task('default', tasks, function () {
       paths.posts + '/**/*',
       paths.css + '/**/*',
       paths.js + '/**/*',
-      paths.images + '/**/*'
-    ], function () {
+      paths.images + '/**/*',
+    ], function() {
       gulp.start('jekyll-rebuild');
     });
   }

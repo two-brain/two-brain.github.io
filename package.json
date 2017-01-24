@@ -3,6 +3,13 @@
   "version": "1.0.1",
   "author": "S1SYPHOS",
   "homepage": "https://twobrain.io/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/two-brain/twobrain.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/two-brain/twobrain.io/issues"
+  },
   "licenses": {
     "type": "MIT",
     "url": "http://opensource.org/licenses/MIT"
@@ -39,7 +46,9 @@
     "browser-sync": "^2.18.6",
     "css-mqpacker": "^5.0.1",
     "del": "^2.2.2",
+    "eslint-config-google": "^0.7.1",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-jshint": "^2.0.4",
@@ -63,11 +72,14 @@
     "webpack-stream": "^3.2.0",
     "yargs": "^6.6.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/S1SYPHOS/S1SYPHOS.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/S1SYPHOS/S1SYPHOS.github.io/issues"
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "google"
+    ],
+    "env": {
+      "browser": true
+    },
+    "rules": {}
   }
 }
