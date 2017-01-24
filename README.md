@@ -8,7 +8,7 @@ I'd like to thank everybody that's making great software - you people are awesom
 
 
 ### ToDo
-- no-js integration
-- adding microdata
-- responsive images
-- custom 404
+- [x] no-js integration
+- [x] adding microdata
+- [ ] responsive images
+- [ ] custom 404
