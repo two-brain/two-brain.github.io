@@ -1,7 +1,3 @@
-// .clearfix {
-//   @include clearfix;
-// }
-
 .wrap {
   @include container;
   padding-left: 15px;
@@ -13,10 +9,7 @@
   }
 
   &.full {
-
-    @include min-width(large) {
-      max-width: 92%;
-    }
+    max-width: 95%;
 
     @include min-width(1440) {
       max-width: 64rem; // * 20 = 1280px
