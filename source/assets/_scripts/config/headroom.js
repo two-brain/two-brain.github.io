@@ -7,7 +7,7 @@
 
  var Headroom = require('headroom.js'),
  header = document.getElementById('site-header'),
- headroom  = new Headroom(header, {
+ headroom = new Headroom(header, {
   //  offset: 150,
    tolerance: 2,
  });

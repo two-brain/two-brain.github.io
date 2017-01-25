@@ -22,16 +22,22 @@ if (document.getElementById('slider')) {
       var nextIndex = (slider.currentItemIndex + 1) % slider.allItemsArray.length;
       slider.goTo(nextIndex);
     };
-    nextTimeout = setTimeout(function() { loadNext(); }, autoPlayMs);
+    nextTimeout = setTimeout(function() {
+      loadNext();
+    }, autoPlayMs);
     slider.on('change', function() {
       clearTimeout(nextTimeout);
-      nextTimeout = setTimeout(function() { loadNext(); }, autoPlayMs);
+      nextTimeout = setTimeout(function() {
+        loadNext();
+      }, autoPlayMs);
     });
 
     wallopEl.addEventListener('mouseenter', function() {
       clearTimeout(nextTimeout);
     });
     wallopEl.addEventListener('mouseleave', function() {
-      nextTimeout = setTimeout(function() { loadNext(); }, autoPlayMs);
+      nextTimeout = setTimeout(function() {
+        loadNext();
+      }, autoPlayMs);
     });
 }

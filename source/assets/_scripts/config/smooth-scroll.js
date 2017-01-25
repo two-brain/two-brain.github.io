@@ -7,5 +7,5 @@
 
 var smoothScroll = require('smooth-scroll');
 smoothScroll.init({
-  activeClass: 'is-active'
+  activeClass: 'is-active',
 });
