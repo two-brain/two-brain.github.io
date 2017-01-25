@@ -1,3 +1,6 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
 node_modules
 npm-debug.log
 Gemfile.lock
@@ -5,7 +8,6 @@ build
 workbench
 source/_data/assets.json
 source/assets/styles
-source/assets/_styles/vendor
 source/assets/scripts
 source/assets/images
 source/assets/fonts/_src
