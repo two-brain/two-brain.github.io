@@ -8,7 +8,7 @@ source/assets/styles
 source/assets/_styles/vendor
 source/assets/scripts
 source/assets/images
-source/assets/fonts/src
+source/assets/fonts/_src
 source/_includes/main.css
 source/_includes/fonts.css
 source/_includes/logo.svg
