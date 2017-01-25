@@ -18,15 +18,15 @@ module.exports = {
     sass:      '_styles',
     jsSrc:     '_scripts',
     imagesSrc: '_images',
-    includes:  'source/_includes'
+    includes:  'source/_includes',
   },
 
   jekyll: {
     config: {
-      default:     '_config.yml',
+      default: '_config.yml',
       development: '_config.dev.yml',
-      production:  '_config.prod.yml',
-    }
+      production: '_config.prod.yml',
+    },
   },
 
   sass: {
@@ -37,21 +37,21 @@ module.exports = {
     browsers: [
       'last 2 versions',
       'android 4',
-      'opera 12'
-    ]
+      'opera 12',
+    ],
   },
 
   pxtorem: {
     options: {
       selectorBlackList: [
-        'html'
+        'html',
       ],
       prop_white_list: [
         'font-size',
       ],
       rootValue: 18,
-      replace: false
-    }
+      replace: false,
+    },
   },
 
   htmlmin: {
@@ -63,8 +63,8 @@ module.exports = {
       minifyCSS: true,
       minifyJS: true,
       collapseBooleanAttributes: true,
-      removeAttributeQuotes: true
-    }
+      removeAttributeQuotes: true,
+    },
   },
 
   js: {
