@@ -7,13 +7,13 @@
       url: https://github.com/bfred-it/object-fit-images
 
 - name: Pedro Duarte
-  url: http://pedroduarte.me/
+  url: http://pedroduarte.me
   projects:
     - name: Wallop
       url: https://github.com/peduarte/wallop
 
 - name: Chris Ferdinandi
-  url: https://gomakethings.com/
+  url: https://gomakethings.com
   projects:
     - name: Smooth Scroll
       url: https://github.com/cferdinandi/smooth-scroll
@@ -21,19 +21,19 @@
       url: https://github.com/cferdinandi/right-height
 
 - name: Bjørn Klinggaard
-  url: http://dinbror.dk/
+  url: http://dinbror.dk
   projects:
     - name: Blazy
       url: https://github.com/dinbror/blazy
 
 - name: Sol Matas
-  url: http://www.solmatas.com/
+  url: http://www.solmatas.com
   projects:
     - name: Bitter (Font)
-      url: http://www.huertatipografica.com/en
+      url: http://huertatipografica.com
 
 - name: Christian Robertson
-  url: http://christianrobertson.com/
+  url: http://christianrobertson.com
   projects:
     - name: Roboto (Font)
       url: https://github.com/google/roboto
@@ -45,7 +45,7 @@
       url: https://github.com/chrissimpkins/Hack
 
 - name: Nick Williams
-  url: http://wicky.nillia.ms/
+  url: http://wicky.nillia.ms
   projects:
     - name: Headroom.js
       url: https://github.com/WickyNilliams/headroom.js
