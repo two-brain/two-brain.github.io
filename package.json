@@ -18,7 +18,7 @@
   "scripts": {
     "start": "gulp",
     "test": "gulp test",
-    "build": "gulp build --production",
+    "build": "gulp clean && gulp build --production && gulp html",
     "production": "gulp --production"
   },
   "keywords": [

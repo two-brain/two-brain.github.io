@@ -81,16 +81,11 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
  * Clean directories before generating new assets
  */
 
- gulp.task('clean:styles', function() {
-   del(paths.css + '/**/*');
- });
-
- gulp.task('clean:scripts', function() {
-   del(paths.js + '/**/*');
- });
-
- gulp.task('clean:images', function() {
-   del(paths.images + '/**/*');
+ gulp.task('clean', function() {
+   del(paths.images);
+   del(paths.js);
+   del(paths.css);
+   del('build/**/*');
  });
 
 /**
