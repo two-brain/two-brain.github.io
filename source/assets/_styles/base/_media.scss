@@ -17,6 +17,11 @@ svg {
   }
 }
 
+iframe {
+  width: 100%;
+  border: 0;
+}
+
 .no-js & .img {
   display: none;
 }
