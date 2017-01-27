@@ -1,8 +1,13 @@
-.headroom {
-  transition: transform 2 * $base-duration $base-timing;
+.animated {
+  animation-duration: 2 * $base-duration;
+  animation-fill-mode: both;
   will-change: transform;
 
-	&--unpinned {
-		transform: translate3d(0, -200%, 0);
+  &.slideDown {
+    animation-name: slideDown;
+  }
+
+	&.slideUp {
+    animation-name: slideUp;
 	}
 }

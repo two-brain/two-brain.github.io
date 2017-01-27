@@ -8,7 +8,12 @@
  var Headroom = require('headroom.js'),
  header = document.getElementById('site-header'),
  headroom = new Headroom(header, {
-  //  offset: 150,
-   tolerance: 2,
+   'offset': 150,
+   'tolerance': 25,
+   'classes': {
+     'initial': 'animated',
+     'pinned': 'slideDown',
+     'unpinned': 'slideUp',
+   },
  });
  headroom.init();
