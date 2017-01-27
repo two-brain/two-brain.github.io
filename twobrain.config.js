@@ -1,3 +1,5 @@
+var secrets      = require('./secrets.json');
+
 module.exports = {
   port: 4000,
 
@@ -54,6 +56,12 @@ module.exports = {
     },
   },
 
+  js: {
+    entry: [
+      'main.js',
+    ],
+  },
+
   htmlmin: {
     options: {
       removeComments: true,
@@ -63,13 +71,18 @@ module.exports = {
       minifyCSS: true,
       minifyJS: true,
       collapseBooleanAttributes: true,
-      removeAttributeQuotes: true,
     },
   },
 
-  js: {
-    entry: [
-      'main.js',
-    ],
+  rsync: {
+    options: {
+      destination: '~/html/',
+      root: 'build',
+      hostname: secrets.host,
+      username: secrets.user,
+      incremental: true,
+      recursive: true,
+      progress: true,
+    },
   },
 };

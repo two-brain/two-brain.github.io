@@ -12,6 +12,7 @@ var eslint       = require('gulp-eslint');
 var gulp         = require('gulp');
 var htmlmin      = require('gulp-htmlmin');
 var imagemin     = require('gulp-imagemin');
+var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var Manifest     = require('assets-webpack-plugin');
 var named        = require('vinyl-named');
 var newer        = require('gulp-newer');
@@ -21,15 +22,17 @@ var postcss      = require('gulp-postcss');
 var pxtorem      = require('postcss-pxtorem');
 var sass         = require('gulp-sass');
 var size         = require('gulp-size');
-var sourcemaps   = require('gulp-sourcemaps');
+var SriHashes    = require('sri-stats-webpack-plugin');
 var svgmin       = require('gulp-svgmin');
 var uglify       = require('gulp-uglify');
 var watch        = require('gulp-watch');
 var webpack      = require('webpack-stream');
+var wp           = require('webpack');
 
-var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-// Load configurations & set variables
+/**
+ * Load configurations & set variables
+ */
 var config       = require('./twobrain.config.js');
 var tasks        = [];
 var build        = [];
@@ -37,13 +40,16 @@ var paths        = {};
 var entry        = [];
 
 
-// Load PostCSS modules
-var processors   = [
+/**
+ * Load PostCSS modules
+ */
+var processors = [
   autoprefixer({browsers: config.autoprefixer.browsers}),
   // require('css-mqpacker')(),
   require('postcss-merge-rules'),
-  pxtorem( config.pxtorem.options )
+  pxtorem( config.pxtorem.options ),
 ];
+
 
 /**
  * Set default & build tasks
@@ -59,6 +65,7 @@ Object.keys(config.tasks).forEach(function(key) {
     build.push(key);
   }
 });
+
 
 /**
  * Paths
@@ -77,6 +84,7 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
   entry.push(paths.jsSrc + '/' + config.js.entry[i]);
 }
 
+
 /**
  * Clean directories before generating new assets
  */
@@ -87,6 +95,7 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
    del(paths.css);
    del('build/**/*');
  });
+
 
 /**
  * Build the Jekyll Site
@@ -103,6 +112,7 @@ gulp.task('jekyll-build', function(done) {
     .on('close', done);
 });
 
+
 /**
  * Rebuild Jekyll & do page reload
  */
@@ -110,6 +120,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
   browsersync.notify('Rebuilded Jekyll');
   browsersync.reload();
 });
+
 
 /**
  * Wait for jekyll-build, then launch the Server
@@ -123,11 +134,17 @@ gulp.task('server', ['jekyll-build'], function() {
   });
 });
 
+
+/**
+ * Minify HTML files
+ */
+
 gulp.task('html', function() {
   return gulp.src('build/**/*.html')
     .pipe(htmlmin(config.htmlmin.options))
-    .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('build'));
 });
+
 
 /**
  * Sass
@@ -141,8 +158,9 @@ gulp.task('sass', function() {
     .pipe(postcss(processors))
     .pipe(size())
     .pipe(gulp.dest('source/_includes'))
-    .pipe(gulp.dest(paths.css));
+  .pipe(gulp.dest(paths.css));
 });
+
 
 /**
  * Images
@@ -169,13 +187,13 @@ gulp.task('imagemin', ['svgmin'], function() {
       progressive: true,
       use: [pngquant()],
     }))
-    .pipe(gulp.dest(paths.images));
+  .pipe(gulp.dest(paths.images));
 });
+
 
 /**
  * Linting JS
  */
-
 gulp.task('eslint', function() {
   return gulp.src(paths.jsSrc + '/**/*')
     .pipe(eslint())
@@ -188,6 +206,7 @@ gulp.task('eslint', function() {
  * Webpack
  *
  * Bundle JavaScript files
+ * Compiles javascript files, writes asset manifest & generates sri hashes
  */
 gulp.task('webpack', function() {
   return gulp.src(entry)
@@ -196,25 +215,32 @@ gulp.task('webpack', function() {
     .pipe(webpack({
       watch: argv.watch ? true : false,
       output: {
-        filename: 'main.[hash].js',
+        filename: '[name].[hash].js',
       },
       resolve: {
         modulesDirectories: ['node_modules', 'bower_components'],
       },
       plugins: [
-        // Adding frontmatter to JS files so Jekyll can process liquid tags -- http://adamyonk.com/2015/10/12/jekyll-and-webpack/
-        // new webpackYO.BannerPlugin('---\n---\n\n', { raw: true }),
+        new wp.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false,
+          },
+          comments: false,
+        }),
         new Manifest({
           filename: 'assets.json',
-          path: './source/_data',
+          path: 'source/_data',
           fullPath: true,
           prettyPrint: true,
         }),
+        new SriHashes({
+          write: true,
+          saveAs: 'source/_data/sriHashes.json',
+        }),
       ],
     }))
-    .pipe(uglify())
     .pipe(size())
-    .pipe(gulp.dest(paths.js));
+  .pipe(gulp.dest(paths.js));
 });
 
 // For internal use only
@@ -237,6 +263,7 @@ gulp.task('build', build, function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
     .on('close', done);
 });
+
 
 /**
  * Default task, running just `gulp` will minify the images, compile the sass, js, and jekyll site,
@@ -277,7 +304,19 @@ gulp.task('default', tasks, function() {
   }
 });
 
+
 /**
  * Test
  */
 gulp.task('test', ['build']);
+
+
+/*
+ * Copy files and folder to server via rsync
+ */
+ var rsync = require('gulp-rsync');
+
+ gulp.task('deploy', function() {
+   return gulp.src(config.paths.dest)
+     .pipe(rsync(config.rsync.options));
+ });
