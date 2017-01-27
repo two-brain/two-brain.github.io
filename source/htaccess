@@ -9,7 +9,7 @@ permalink: .htaccess
 # access to the main server configuration file (which is usually called
 # `httpd.conf`), you should add this logic there.
 #
-# https://httpd.apache.org/docs/current/howto/htaccess.html.
+# https://httpd.apache.org/docs/current/howto/htaccess.html
 
 # ######################################################################
 # # CROSS-ORIGIN                                                       #
@@ -25,9 +25,9 @@ permalink: .htaccess
 # http://enable-cors.org/
 # http://www.w3.org/TR/cors/
 
-# <IfModule mod_headers.c>
-#     Header set Access-Control-Allow-Origin "*"
-# </IfModule>
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Cross-origin images                                                |
@@ -134,7 +134,7 @@ Options -MultiViews
     # the `X-UA-Compatible` response header should be send only for
     # HTML documents and not for the other resources.
 
-    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
         Header unset X-UA-Compatible
     </FilesMatch>
 
@@ -238,6 +238,7 @@ Options -MultiViews
     AddType application/x-chrome-extension              crx
     AddType application/x-opera-extension               oex
     AddType application/x-xpinstall                     xpi
+    AddType text/markdown                               markdown md
     AddType text/vcard                                  vcard vcf
     AddType text/vnd.rim.location.xloc                  xloc
     AddType text/vtt                                    vtt
@@ -272,6 +273,8 @@ AddDefaultCharset utf-8
                      .json \
                      .jsonld \
                      .manifest \
+                     .markdown \
+                     .md \
                      .rdf \
                      .rss \
                      .topojson \
@@ -339,10 +342,10 @@ AddDefaultCharset utf-8
     # RewriteOptions <options>
 
     # (6)
-    # RewriteCond %{HTTPS} =on
-    # RewriteRule ^ - [env=proto:https]
-    # RewriteCond %{HTTPS} !=on
-    # RewriteRule ^ - [env=proto:http]
+    RewriteCond %{HTTPS} =on
+    RewriteRule ^ - [env=proto:https]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ - [env=proto:http]
 
 </IfModule>
 
@@ -353,13 +356,11 @@ AddDefaultCharset utf-8
 # Redirect from the `http://` to the `https://` version of the URL.
 # https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
 
-# <IfModule mod_rewrite.c>
-#    RewriteEngine On
-#    # RewriteCond %{HTTPS} !=on
-#    # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-#    RewriteCond %{SERVER_PORT} 80
-#    RewriteRule ^(.*)$ https://twobrain.io/$1 [L,R=301]
-# </IfModule>
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteCond %{HTTPS} !=on
+   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Suppressing / Forcing the `www.` at the beginning of URLs          |
@@ -385,12 +386,8 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    # RewriteCond %{HTTPS} !=on
-    # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    # RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
-    RewriteCond %{SERVER_PORT} 443
-    RewriteCond %{HTTP_HOST} ^www[.].+$
-    RewriteRule ^(.*)$ https://twobrain.io/$1 [L,R=301]
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -402,7 +399,6 @@ AddDefaultCharset utf-8
 
 # <IfModule mod_rewrite.c>
 #     RewriteEngine On
-#     RewriteCond %{HTTPS} !=on
 #     RewriteCond %{HTTP_HOST} !^www\. [NC]
 #     RewriteCond %{SERVER_ADDR} !=127.0.0.1
 #     RewriteCond %{SERVER_ADDR} !=::1
@@ -448,19 +444,19 @@ AddDefaultCharset utf-8
 # http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx
 # https://www.owasp.org/index.php/Clickjacking
 
-# <IfModule mod_headers.c>
+<IfModule mod_headers.c>
 
-#     Header set X-Frame-Options "DENY"
+    Header set X-Frame-Options "DENY"
 
-#     # `mod_headers` cannot match based on the content-type, however,
-#     # the `X-Frame-Options` response header should be send only for
-#     # HTML documents and not for the other resources.
+    # `mod_headers` cannot match based on the content-type, however,
+    # the `X-Frame-Options` response header should be send only for
+    # HTML documents and not for the other resources.
 
-#     <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
-#         Header unset X-Frame-Options
-#     </FilesMatch>
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset X-Frame-Options
+    </FilesMatch>
 
-# </IfModule>
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Content Security Policy (CSP)                                      |
@@ -483,23 +479,19 @@ AddDefaultCharset utf-8
 # http://www.html5rocks.com/en/tutorials/security/content-security-policy/
 # https://w3c.github.io/webappsec-csp/
 
-# <IfModule mod_headers.c>
+<IfModule mod_headers.c>
 
-#     Header set Content-Security-Policy "script-src 'self'; object-src 'self'"
-#     Header set X-Content-Security-Policy "script-src 'self'; object-src 'self'"
-#     Header set X-WebKit-CSP "script-src 'self'; object-src 'self'"
+    Header set Content-Security-Policy "script-src 'self' 'sha256-OfMpqDGyY1Ni0AKQ1BZS48IX/sqtXNLF8CS1RQr2v94='; object-src 'self'"
 
-#     # `mod_headers` cannot match based on the content-type, however,
-#     # the `Content-Security-Policy` response header should be send
-#     # only for HTML documents and not for the other resources.
+    # `mod_headers` cannot match based on the content-type, however,
+    # the `Content-Security-Policy` response header should be send
+    # only for HTML documents and not for the other resources.
 
-#     <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
-#         Header unset Content-Security-Policy
-#         Header unset X-Content-Security-Policy
-#         Header unset X-WebKit-CSP
-#     </FilesMatch>
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset Content-Security-Policy
+    </FilesMatch>
 
-# </IfModule>
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | File access                                                        |
@@ -556,7 +548,7 @@ AddDefaultCharset utf-8
 # include: configuration files, files that contain metadata about the
 # project (e.g.: project dependencies), build scripts, etc..
 
-<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
 
     # Apache < 2.3
     <IfModule !mod_authz_core.c>
@@ -594,9 +586,9 @@ AddDefaultCharset utf-8
 # https://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec-14#section-6.1
 # http://blogs.msdn.com/b/ieinternals/archive/2014/08/18/hsts-strict-transport-security-attacks-mitigations-deployment-https.aspx
 
-# <IfModule mod_headers.c>
-#     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-# </IfModule>
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Reducing MIME type security risks                                  |
@@ -654,20 +646,20 @@ AddDefaultCharset utf-8
 # http://blogs.msdn.com/b/ieinternals/archive/2011/01/31/controlling-the-internet-explorer-xss-filter-with-the-x-xss-protection-http-header.aspx
 # https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
 
-# <IfModule mod_headers.c>
+<IfModule mod_headers.c>
 
-#     #                           (1)    (2)
-#     Header set X-XSS-Protection "1; mode=block"
+    #                           (1)    (2)
+    Header set X-XSS-Protection "1; mode=block"
 
-#     # `mod_headers` cannot match based on the content-type, however,
-#     # the `X-XSS-Protection` response header should be send only for
-#     # HTML documents and not for the other resources.
+    # `mod_headers` cannot match based on the content-type, however,
+    # the `X-XSS-Protection` response header should be send only for
+    # HTML documents and not for the other resources.
 
-#     <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
-#         Header unset X-XSS-Protection
-#     </FilesMatch>
+    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+        Header unset X-XSS-Protection
+    </FilesMatch>
 
-# </IfModule>
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Server-side technology information                                 |
@@ -777,6 +769,7 @@ ServerSignature Off
                                       "text/html" \
                                       "text/javascript" \
                                       "text/plain" \
+                                      "text/markdown" \
                                       "text/vcard" \
                                       "text/vnd.rim.location.xloc" \
                                       "text/vtt" \
@@ -903,6 +896,11 @@ FileETag None
     ExpiresByType application/manifest+json             "access plus 1 week"
     ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
     ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+
+  # Markdown
+
+    ExpiresByType text/markdown                         "access plus 1 month"
 
 
   # Media files
