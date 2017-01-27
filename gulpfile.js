@@ -317,6 +317,6 @@ gulp.task('test', ['build']);
  var rsync = require('gulp-rsync');
 
  gulp.task('deploy', function() {
-   return gulp.src(config.paths.dest)
+   return gulp.src([config.paths.dest, config.paths.dest + '.htaccess'])
      .pipe(rsync(config.rsync.options));
  });
