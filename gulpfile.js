@@ -24,7 +24,6 @@ var sass         = require('gulp-sass');
 var size         = require('gulp-size');
 var SriHashes    = require('sri-stats-webpack-plugin');
 var svgmin       = require('gulp-svgmin');
-var uglify       = require('gulp-uglify');
 var watch        = require('gulp-watch');
 var webpack      = require('webpack-stream');
 var wp           = require('webpack');
@@ -157,7 +156,7 @@ gulp.task('sass', function() {
     }).on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(size())
-    .pipe(gulp.dest('source/_includes'))
+  .pipe(gulp.dest('source/_includes'))
   .pipe(gulp.dest(paths.css));
 });
 
@@ -309,6 +308,12 @@ gulp.task('default', tasks, function() {
  * Test
  */
 gulp.task('test', ['build']);
+
+
+/**
+ * Assets
+ */
+gulp.task('assets', ['sass', 'webpack', 'imagemin']);
 
 
 /*

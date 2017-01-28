@@ -1,6 +1,6 @@
 {
   "name": "twobrain.io",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "S1SYPHOS",
   "homepage": "https://twobrain.io/",
   "repository": {
@@ -18,8 +18,9 @@
   "scripts": {
     "start": "gulp",
     "test": "gulp test",
+    "assets": "gulp assets",
     "build": "gulp clean && gulp build --production && gulp html",
-    "deploy": "yarn run build && gulp deploy",
+    "deploy": "gulp clean && gulp build --production && gulp html && gulp deploy",
     "clean": "gulp clean"
   },
   "keywords": [
