@@ -7,7 +7,7 @@ Gemfile.lock
 secrets.json
 build
 workbench
-source/piwik.js
+source/tracking.js
 source/_data/*.json
 source/assets/styles
 source/assets/scripts

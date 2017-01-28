@@ -5,7 +5,12 @@
 </script>
 
 {% if site.piwik == true %}
-  <script src="{{ site.url }}/piwik.js"
+  <script src="{{ site.url }}/piwik/piwik.js"
+    async defer
+    integrity="sha384-MG3Qv+K7FPgBVlqAhxsTS+wz56YPXvN45y/1jLS5ISwsq2w24rjNAtH1wzZuFpwW"
+    crossorigin="anonymous">
+  </script>
+  <script src="{{ site.url }}/tracking.js"
     type="text/javascript"
     integrity="sha384-MG3Qv+K7FPgBVlqAhxsTS+wz56YPXvN45y/1jLS5ISwsq2w24rjNAtH1wzZuFpwW"
     crossorigin="anonymous">
