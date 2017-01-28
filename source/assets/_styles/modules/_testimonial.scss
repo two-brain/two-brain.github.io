@@ -4,9 +4,11 @@
 
   .image-area {
     margin-bottom: $small-spacing;
+    height: 150px;
 
     @include min-width(medium) {
       margin: -$small-spacing $base-spacing 0 (-(2 * $small-spacing));
+      height: 200px;
     }
   }
 

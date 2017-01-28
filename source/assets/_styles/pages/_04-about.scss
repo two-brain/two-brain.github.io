@@ -9,6 +9,11 @@
 
   .image-area {
     text-align: center;
+    height: 150px;
+
+    @include min-width(medium) {
+      height: 200px;
+    }
   }
 
   h3 {

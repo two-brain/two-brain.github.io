@@ -1,10 +1,7 @@
-.lazy {
-  animation-duration: 2 * $base-duration;
+.img.lazy {
+  animation-duration: 4 * $base-duration;
   animation-fill-mode: both;
   will-change: opacity;
-
-  // transition: opacity 2 * $base-duration $base-timing;
-  // opacity: 0;
 
   &--has-loaded,
   &--has-error,
