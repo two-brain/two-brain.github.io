@@ -1,10 +1,14 @@
 .lazy {
-  transition: opacity $base-duration $base-timing;
-  opacity: 0;
+  animation-duration: 2 * $base-duration;
+  animation-fill-mode: both;
+  will-change: opacity;
+
+  // transition: opacity 2 * $base-duration $base-timing;
+  // opacity: 0;
 
   &--has-loaded,
   &--has-error,
   .no-js & {
-    opacity: 1;
+    animation-name: fadeIn;
   }
 }

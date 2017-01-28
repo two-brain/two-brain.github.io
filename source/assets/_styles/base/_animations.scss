@@ -9,6 +9,17 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @keyframes slideDown {
   0% {
     transform: translate3d(0, -100%, 0);

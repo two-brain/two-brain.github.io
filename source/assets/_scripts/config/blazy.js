@@ -7,6 +7,7 @@
 
 var Blazy = require('blazy');
 var lazyload = new Blazy({
+  offset: 0,
   selector: '.lazy',
   successClass: 'lazy--has-loaded',
   errorClass: 'lazy--has-error',
