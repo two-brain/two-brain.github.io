@@ -26,12 +26,6 @@
     - name: Blazy
       url: https://github.com/dinbror/blazy
 
-- name: Sol Matas
-  url: http://www.solmatas.com
-  projects:
-    - name: Bitter (Font)
-      url: http://huertatipografica.com
-
 - name: Christian Robertson
   url: http://christianrobertson.com
   projects:
