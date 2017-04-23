@@ -1,0 +1,493 @@
+[33mcommit e484f66dd603431be452096eb26e83f6de634c02[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Apr 24 00:14:00 2017 +0200
+
+    Removed buggy jekyll-mail-protect gem
+
+[33mcommit ee8aa5471d72d8c718fdc8fee9116c1a01e5f1dc[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Apr 24 00:06:29 2017 +0200
+
+    Changed metadata & address
+
+[33mcommit c6130136f426661e9b9c0a894ab2ca88a25613ef[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Apr 24 00:06:08 2017 +0200
+
+    Changed piwik tracking domain
+
+[33mcommit f6fc37ab4a6ca69ef5bcd9e9c3aabddaf048a73c[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Apr 21 15:03:50 2017 +0200
+
+    Removed unneccessary roles & lazy loading for small images
+
+[33mcommit 9b1bf44ae1a28fa0b8eee3efcae4e0327fc657ed[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Apr 21 15:03:15 2017 +0200
+
+    Removed Changelog (not too happy with the generator)
+
+[33mcommit 3671c2c146c8747c6adb1bcf77a8efc51c13b8c7[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Apr 21 15:02:46 2017 +0200
+
+    Edited/renamed some images/icons
+
+[33mcommit ca26a7c0ff29fae348fe3a44bd12f36dfec19295[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Apr 21 14:58:54 2017 +0200
+
+    Removed Bitter font
+
+[33mcommit ac2b60d1400ff91b3a2c6f786e8fcbe9e5801a03[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 17:30:30 2017 +0100
+
+    Making piwik tracking CSP-compatible, fixing #5
+
+[33mcommit 81538175387f047da9014705cba18623c032be42[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 17:29:37 2017 +0100
+
+    Added CHANGELOG.md
+
+[33mcommit 68d4847e0acc7034e086cf01768de0c0f04ca1b8[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 12:17:47 2017 +0100
+
+    Releasing 1.2.0
+    
+    Adding setup section to README
+    
+    Introducing yarn as build tool
+    
+    Adding asset task for first-time asset generation
+    
+    Cleaning up
+
+[33mcommit 603efe3593fdfed7628a67d8ff716a12f6f3c1b0[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 11:33:53 2017 +0100
+
+    Added Vary: Accept-Encoding, fixed gzip compression
+
+[33mcommit 16dd5fd37e1c2793e1c76bab17094b737582e79f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 11:32:05 2017 +0100
+
+    Finished image lazyloading, fixed page reflow, closing #1
+
+[33mcommit 1dcc79271dede2f9e70edb7c93e79f493e102039[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 10:58:06 2017 +0100
+
+    Removed Piwik tracking for non-JS people (they don't want to be bothered, so be it :tada:)
+
+[33mcommit fc03e3d494c88bd5d41bc02a5c1be44c8ff0d4ae[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 28 10:56:28 2017 +0100
+
+    Replaced lazyload transition with fadeIn animation
+    
+    Added lazyloading to Piwik opt-out iframe
+
+[33mcommit 71f4cff06bec0a2469d407db7a4b5ee4538a1c7f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 18:01:36 2017 +0100
+
+    Added .htaccess - Fixing #4
+
+[33mcommit fbdab38172a33634898050ac108be721a57fbde4[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 17:51:35 2017 +0100
+
+    Added .htaccess - Score: 115/100 by https://observatory.mozilla.org/
+
+[33mcommit 871e1e0286884819a8b1a071447ea28e53740292[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 13:01:18 2017 +0100
+
+    Added .htaccess & explicitly included in deploy task
+
+[33mcommit 69536616a3caf61dd3e022d54a7869adb07f8da1[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 11:40:43 2017 +0100
+
+    Fixed trailing comma
+
+[33mcommit 031f5b6003c584cd53dce2b0d3010444f2585168[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 11:38:33 2017 +0100
+
+    Fixed image dimension (fixing bug in chrome which was scaling it down)
+
+[33mcommit 40326671b1eab7f6203109f2b312be0e9763319a[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 11:37:29 2017 +0100
+
+    Added secrets.json.example
+
+[33mcommit 1f7def458894de86111ced563239c08e4de093fe[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 11:35:35 2017 +0100
+
+    Revamped javascript workflow
+    
+    Added SRI hash generation
+    
+    Replaced gulp-uglify with webpack-uglify plugin
+    
+    Added deploy task via rsync
+
+[33mcommit f0e7a6fa7a83fbb0824d912976a06d9deec4b542[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 11:29:01 2017 +0100
+
+    Revamped the way scripts are added to the page
+
+[33mcommit a585870d9bf15c00e081eaafdbae328d4b8e190a[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Fri Jan 27 11:25:57 2017 +0100
+
+    Replaced header transition with keyframe animaton
+
+[33mcommit 8962c43b4c786e679a64a451c21423233a3b8e0a[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Thu Jan 26 11:15:24 2017 +0100
+
+    Removed unnecessary iframe styles
+
+[33mcommit cd166f274d04c127c82248f66b71a42868bc6e31[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Thu Jan 26 11:14:37 2017 +0100
+
+    Fixed meta descriptions & title
+
+[33mcommit e4ea38ec76e401014bd141c77e1b2028408a9958[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 22:30:42 2017 +0100
+
+    Putting vendor directory under version control
+
+[33mcommit 0733037d0c8d6defe1328f4523e64681c4f852f3[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 22:29:27 2017 +0100
+
+    Fixing piwik iframe
+
+[33mcommit ae440cd0f23f86cd1e780deea516c43eea5c22ab[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 22:28:55 2017 +0100
+
+    Adding trailing commas
+
+[33mcommit 6b4f382bcf08949229634ab094bc33f31d0f168e[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 20:30:54 2017 +0100
+
+    Delete sturbock from portfolio, make robots.txt production-ready :cake: Time to GO LIVE
+
+[33mcommit d7540ac00e44552248625fe77e736a674a3015ca[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 20:30:03 2017 +0100
+
+    Modified workflow: delete old assets, generate new ones & minify resulting html
+
+[33mcommit 93df2a29d1135ffd25651ed60ab9b8d1588f57c4[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 20:08:47 2017 +0100
+
+    Added font source directory to gitignore
+
+[33mcommit bd0d661278a86c9198ffbdc1bd9eb8a32e43e738[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 20:07:03 2017 +0100
+
+    Added & modified missing quotes
+
+[33mcommit 730be91be483aed2b39ae124726f16f32e98af75[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 20:06:06 2017 +0100
+
+    All hail ESLint!
+
+[33mcommit 34d54aa1bb8b54a3b25b855def9c9aff555614ff[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Jan 25 20:04:59 2017 +0100
+
+    Forced trailing slash policy
+
+[33mcommit 9225ae1fff208dd47fca03ed8087a8a136a59209[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 12:23:03 2017 +0100
+
+    Adjusted paddings & margins, increased container width for smaller devices
+
+[33mcommit 42f6f5064921070a12d32deadc5766a0fadc1270[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 12:22:07 2017 +0100
+
+    Adjusted some team info
+
+[33mcommit e5a254779982514738a12ce8094ba8aaa49bfe10[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 11:55:28 2017 +0100
+
+    Added srcset functionality
+
+[33mcommit 039f43bd350a9c2134f8fe623cf9af27931b5c69[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 09:35:21 2017 +0100
+
+    Releasing 1.1.0
+
+[33mcommit 1db56b5f67b531e2951891178aad301b560f9b09[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 09:30:55 2017 +0100
+
+    Updated README
+
+[33mcommit 95ce1a462ae49ff7bee17abee5217ea5c98d3a6f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 09:26:09 2017 +0100
+
+    Integrated no-js compatibility
+
+[33mcommit fcb60878fa2a4882e1fc41fceb87def6f1c5e89f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 09:24:30 2017 +0100
+
+    Fixed Xing link title
+
+[33mcommit de9fd21b1496d6ddea89b7a3b2f2f992f41b4a2f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 02:42:47 2017 +0100
+
+    Bumped version number
+
+[33mcommit d6a6978644e2f02b906badad9c51e4f9f55816d5[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 02:38:09 2017 +0100
+
+    Updated some files
+
+[33mcommit beb96b8677ca85392b4c1ff962551628a6d45db9[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 02:37:44 2017 +0100
+
+    Replaced jshint with eslint
+
+[33mcommit 1b97dd653573021063307ed7f5392564b6562de4[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 01:59:16 2017 +0100
+
+    Changed minor stuff
+
+[33mcommit f97bf1562e32864acbc83bbdc5fa6e563f33707b[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Tue Jan 24 01:58:45 2017 +0100
+
+    Made font-loading more modular & restructured head.html, outsourcing schema.org json file
+
+[33mcommit 401a3d097dc1bf580a9fc2258dc33cf15bb9b05c[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 17:41:49 2017 +0100
+
+    Comitting latest changes
+    
+    Replacing npm with yarn
+    
+    Added images for twitter cards & open graph
+    
+    Reworked some template files & integrated font loading
+    
+    Updated config files
+
+[33mcommit 32b95d788c0f69892062478d5b7e055e38b7dcb5[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 17:39:49 2017 +0100
+
+    Adjusting scripts
+
+[33mcommit 66ca8ef7fde2b0c3e3ad17025080b7fb827e012f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 17:38:30 2017 +0100
+
+    Repainted almost everything :hammer:
+
+[33mcommit e0d89446701fca516fb3b9aa18c6715773f9a4a5[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 16:53:28 2017 +0100
+
+    Updated contributions.yml
+
+[33mcommit 0d3b11a05a45cbc94ac2d1b9f9a634a5e5581107[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 16:53:05 2017 +0100
+
+    Reintroduced team.yml
+
+[33mcommit 1138c169e128712b0a6417e3176574adfcbaa0ab[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 16:52:40 2017 +0100
+
+    Implemented gulp-svgmin
+
+[33mcommit 2e9f5a474aeec063839eb3bc836a5a4510fc2823[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Mon Jan 23 12:20:59 2017 +0100
+
+    Uploaded Roboto font files
+
+[33mcommit 15c226d9b00b453f09221dbf97a2e216e4026093[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 12:23:53 2017 +0100
+
+    Added SKILLZ award to portfolio
+
+[33mcommit 0af68d788f1811d6e01ac290d749794efecffd2f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 12:18:51 2017 +0100
+
+    Finished testimonial styles
+
+[33mcommit abf4dce4801cb6756ac9ce4638c0bdc24d5e3c59[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 12:10:21 2017 +0100
+
+    Fixed typos
+
+[33mcommit 8ebe7bfae4b0cd2384355a57954e01478c65b893[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 12:08:26 2017 +0100
+
+    Moved some images around, added dj-derbystarr
+
+[33mcommit a4d958203e66c27e68a5cbc5e2965c15277b85c0[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 12:07:17 2017 +0100
+
+    Added right-height by @cferdinandi
+
+[33mcommit f3a440309761028a2ab92158958a4ad200a90193[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 12:04:52 2017 +0100
+
+    Updated contributors, added creators of Hack & Roboto
+
+[33mcommit 0dbd3e77358253b605b0bbdbebd05f853c46cd3f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:56:28 2017 +0100
+
+    Updated & reworked almost the entire page, all styles & elements
+
+[33mcommit 6c1dbdfe9d740803bb4117a7c64a78b87f5b7db1[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:54:17 2017 +0100
+
+    Added new logo (raw)
+
+[33mcommit f941d897e15794a643de463fdb7dfea25b035c77[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:53:34 2017 +0100
+
+    Deleted unused stuff like vcard, vendor/neat, posts, old logos & html templates, ..
+
+[33mcommit a1b28f9bf8b76857ee4fab9ece0df7c2b8492352[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:48:57 2017 +0100
+
+    Updated .gitignore (styles/vendor)
+
+[33mcommit 957f6f49cc2b414a67868dc3cd31c39c140d5978[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:47:57 2017 +0100
+
+    Thinned out scripts
+    
+    Introduced headroom.js
+    
+    Deleted barba, velocity, waypoints & parallax
+
+[33mcommit fbeb68c2f09a1e7e861cf33e997c4cea5290ffd3[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:41:13 2017 +0100
+
+    Restructured layout files
+
+[33mcommit ffe253630bb98a21ee7cb1bf1cfd7e2adf725319[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:39:52 2017 +0100
+
+    Tidied up icons directory
+    
+    Deleted unused icons
+    
+    Added new quotes & footer icons
+
+[33mcommit 8f4672069c668e30848dae7274f28f59dbfb789f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:38:23 2017 +0100
+
+    Moved template files to _include root directory
+
+[33mcommit ef826f7cb4112a090e687e2ba41cc52779d7fe04[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:36:45 2017 +0100
+
+    Switched out fonts, from Gidole/Bitter to Roboto
+
+[33mcommit 422b102ac9d667aa430883cb36064443e78ed934[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:35:40 2017 +0100
+
+    Deleted contact form, no need for ajax script
+
+[33mcommit 3ff167a5341055f95a3562313f531af3f7404b9d[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 10:31:21 2017 +0100
+
+    Added check to detect source of errors
+
+[33mcommit 897bc95fa1c6b50b00795c8732218ba56f5b47db[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 09:28:17 2017 +0100
+
+    Deleted former background images && added hkluge.jpg
+
+[33mcommit 475003fe4ed890893bad94f60c2cc7d9520273c1[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 09:22:04 2017 +0100
+
+    Changed favicon
+
+[33mcommit 4e890d07245053cf8f6c14dd0141693427df097d[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 09:20:58 2017 +0100
+
+    Added humans.txt
+
+[33mcommit b6ea0341237fdb83a0e4e443f9b1b58b544db10d[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 09:15:23 2017 +0100
+
+    Updated dependencies
+
+[33mcommit 1b302812067163ee97189a5a99c817bfaca28965[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 09:11:17 2017 +0100
+
+    Updated config files
+
+[33mcommit a967a3faab66eebf67c8916ee1577010719ff36f[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Sat Jan 21 09:05:58 2017 +0100
+
+    Updated Gemfile
+
+[33mcommit e796fb13dac4c98e056577955cadc3316aee2060[m
+Author: S1SYPHOS <m.folkers@posteo.de>
+Date:   Wed Nov 9 00:08:31 2016 +0100
+
+    Initial commit
