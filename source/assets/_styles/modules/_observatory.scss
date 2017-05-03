@@ -1,0 +1,31 @@
+.observatory {
+	padding: 20px 35px;
+	text-align: center;
+}
+
+.grade {
+  position: relative;
+  display: inline-block;
+  border-radius: $base-border-radius;
+  color: #fff;
+  font-size: 24px;
+  height: 44px;
+  width: 44px;
+  top: -6px;
+  right: -6px;
+  line-height: 40px; /* height - total border */
+  padding-right: 4px;
+  background: #2d882d;
+  border: solid 2px #116611;
+  // text-align: center;
+
+  sup {
+    float: right;
+    font-size: 16px;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+	  vertical-align: baseline;
+	  line-height: 0;
+  }
+}
