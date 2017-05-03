@@ -46,14 +46,12 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-  }
 
-  &:hover .loaded &_overlay,
-  &:focus .loaded &_overlay,
-  .no-js &:hover &_overlay,
-  .no-js &:focus &_overlay {
-    background: rgba(0, 0, 0, 0.75);
-    opacity: 1;
+    &:hover,
+    &:focus  {
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 1;
+    }
   }
 
   &--fade &_item--hide-previous,
