@@ -55,3 +55,20 @@
     </div>
   </div>
 </section>
+
+<section style="text-align: center; width: 50%; margin: 0 auto;">
+  <div class="my-slider">
+
+    {% for image in site.static_files %}
+        {% if image.path contains 'images/cms' %}
+        <div class="">
+          <img src="{{ site.baseurl }}{{ image.path }}" alt="image">
+          <b style="display: block">{{ image.name | remove: '.svg' | capitalize }}</b>
+
+        </div>
+        {% endif %}
+    {% endfor %}
+
+
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Logo"
+   viewBox="0 0 85 100"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="magento.svg"
+   width="85"
+   height="100">
+  <metadata
+     id="metadata30">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs28" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="870"
+     inkscape:window-height="506"
+     id="namedview26"
+     showgrid="false"
+     inkscape:zoom="2.1972341"
+     inkscape:cx="36.290344"
+     inkscape:cy="71.119525"
+     inkscape:window-x="291"
+     inkscape:window-y="1092"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Logo" />
+  <path
+     id="polygon8"
+     style="fill:#f26322"
+     d="m 36.401011,82.166632 0,-50.00546 -12.13367,7.142087 0.02144,49.983621 18.200505,10.71311 18.221943,-10.71311 0,-49.983621 -12.144389,-7.142087 0,49.972704 0,0 -6.066834,3.592874 z M 0,74.991797 l 12.14439,7.153 -0.08575,-49.983625 30.39849,-17.877026 30.398487,17.877026 0,49.961782 L 85,74.991797 85,24.975416 42.542872,-10e-6 l 0,0 L 0,25.019103 Z"
+     inkscape:connector-curvature="0" />
+</svg>

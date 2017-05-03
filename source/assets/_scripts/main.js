@@ -4,15 +4,16 @@
  * Loading main js files
  */
 
-require('./partials/feature-detection.js');
+require('./partials/feature-detection');
 
 /*
  * Loading configuration files for vendor js
  */
 
-require('./config/blazy.js');
-require('./config/headroom.js');
-require('./config/object-fit-images.js');
-require('./config/right-height.js');
-require('./config/smooth-scroll.js');
-require('./config/wallop.js');
+require('./config/blazy');
+require('./config/headroom');
+require('./config/object-fit-images');
+require('./config/right-height');
+require('./config/smooth-scroll');
+require('./config/wallop');
+require('./config/tiny-slider');
