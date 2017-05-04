@@ -1,8 +1,9 @@
 'use strict';
 
 /**
- * gulp modules
+ * Loading modules
  */
+
 var argv         = require('yargs').argv;
 var autoprefixer = require('autoprefixer');
 var browsersync  = require('browser-sync').create();
@@ -20,13 +21,15 @@ var plumber      = require('gulp-plumber');
 var pngquant     = require('imagemin-pngquant');
 var postcss      = require('gulp-postcss');
 var pxtorem      = require('postcss-pxtorem');
+var rsync        = require('gulp-rsync');
 var sass         = require('gulp-sass');
 var size         = require('gulp-size');
 var SriHashes    = require('sri-stats-webpack-plugin');
 var svgmin       = require('gulp-svgmin');
+var UglifyJS     = require('uglifyjs-webpack-plugin');
 var watch        = require('gulp-watch');
 var webpack      = require('webpack-stream');
-var wp           = require('webpack');
+var webpack2     = require('webpack');
 
 
 /**
@@ -79,7 +82,7 @@ Object.keys(config.paths).forEach(function(key) {
   }
 });
 
-for (var i = 0; i <= config.js.entry.length - 1; i++) {
+for (let i = 0; i <= config.js.entry.length - 1; i++) {
   entry.push(paths.jsSrc + '/' + config.js.entry[i]);
 }
 
@@ -100,7 +103,7 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function(done) {
-  var jekyllConfig = config.jekyll.config.default;
+  let jekyllConfig = config.jekyll.config.default;
   if (argv.production) {
     process.env.JEKYLL_ENV = 'production';
     jekyllConfig += config.jekyll.config.production ? ',' + config.jekyll.config.production : '';
@@ -216,11 +219,8 @@ gulp.task('webpack', function() {
       output: {
         filename: '[name].[hash].js',
       },
-      resolve: {
-        modulesDirectories: ['node_modules', 'bower_components'],
-      },
       plugins: [
-        new wp.optimize.UglifyJsPlugin({
+        new UglifyJS({
           compress: {
             warnings: false,
           },
@@ -237,7 +237,7 @@ gulp.task('webpack', function() {
           saveAs: 'source/_data/sriHashes.json',
         }),
       ],
-    }))
+    }, webpack2))
     .pipe(size())
   .pipe(gulp.dest(paths.js));
 });
@@ -319,7 +319,6 @@ gulp.task('assets', ['sass', 'webpack', 'imagemin']);
 /*
  * Copy files and folder to server via rsync
  */
- var rsync = require('gulp-rsync');
 
  gulp.task('deploy', function() {
    return gulp.src([config.paths.dest, config.paths.dest + '.htaccess'])

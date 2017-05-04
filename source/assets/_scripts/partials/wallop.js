@@ -5,10 +5,12 @@
  * by Pedro Duarte
  */
 
-if (document.getElementById('slider')) {
-    var Wallop = require('wallop'),
-    wallopEl = document.getElementById('slider'),
-    slider = new Wallop(wallopEl, {
+import Wallop from 'wallop';
+
+export default function wallopSlider() {
+  if (document.getElementById('slider')) {
+    const wallopEl = document.getElementById('slider');
+    const slider = new Wallop(wallopEl, {
       itemClass: 'slider_item',
       currentItemClass: 'slider_item--current',
       showPreviousClass: 'slider_item--show-previous',
@@ -16,12 +18,13 @@ if (document.getElementById('slider')) {
       hidePreviousClass: 'slider_item--hide-previous',
       hideNextClass: 'slider_item--hide-next',
     });
-    var autoPlayMs = 4500,
-    nextTimeout,
-    loadNext = function() {
-      var nextIndex = (slider.currentItemIndex + 1) % slider.allItemsArray.length;
+    const autoPlayMs = 4500;
+    const loadNext = function() {
+      const nextIndex =
+      (slider.currentItemIndex + 1) % slider.allItemsArray.length;
       slider.goTo(nextIndex);
     };
+    let nextTimeout;
     nextTimeout = setTimeout(function() {
       loadNext();
     }, autoPlayMs);
@@ -40,4 +43,5 @@ if (document.getElementById('slider')) {
         loadNext();
       }, autoPlayMs);
     });
+  }
 }

@@ -4,6 +4,3 @@
  *
  * by Federico Brigante
  */
-
-var objectFitImages = require('object-fit-images');
-objectFitImages();
